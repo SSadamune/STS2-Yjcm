@@ -1,0 +1,18 @@
+{
+  "YJCM_MONSTER_MOU_SIMA_YI.name": "谋司马懿",
+  "YJCM_MONSTER_MOU_SIMA_YI.moves.HEAVY_ATTACK.title": "鹰视狼顾",
+  "YJCM_MONSTER_MOU_SIMA_YI.moves.MULTI_ATTACK.title": "冢虎连袭",
+  "YJCM_MONSTER_MOU_SIMA_YI.moves.GROWTH.title": "韬晦养威",
+  "YJCM_MONSTER_MOU_SIMA_YI.moves.DEFENSE.title": "深垒固守",
+  "YJCM_MONSTER_MOU_SIMA_YI.moves.ATTACK_DEFENSE.title": "攻守易势",
+  "YJCM_MONSTER_MOU_SIMA_YI.moves.ATTACK_GROWTH.title": "狼啸破阵",
+  "YJCM_MONSTER_MOU_SIMA_YI.moves.DEFENSE_GROWTH.title": "蓄锐待发",
+  "YJCM_SWEEP_ESCAPE_1.banter": "跑啊！",
+  "YJCM_SWEEP_ESCAPE_2.banter": "风紧，扯呼！",
+  "YJCM_SWEEP_ESCAPE_3.banter": "惹不起，告辞！",
+  "YJCM_SWEEP_ESCAPE_4.banter": "留得青山在，不怕没柴烧！",
+  "YJCM_SWEEP_ESCAPE_5.banter": "敌将凶猛，暂避锋芒！",
+  "YJCM_SWEEP_ESCAPE_6.banter": "这仗没法打了，快撤！",
+  "YJCM_SWEEP_ESCAPE_7.banter": "大丈夫能屈能伸，撤！",
+  "YJCM_SWEEP_ESCAPE_8.banter": "我还会回来的！"
+}

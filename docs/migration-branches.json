@@ -1,0 +1,230 @@
+[
+  {
+    "file": "Cards\\EventAncientCards.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\HuangWudieShaXue.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\HuangWudieShouXing.cs",
+    "branches": 2
+  },
+  {
+    "file": "Cards\\HuangWudieShuangRui.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\JieDongFeng.cs",
+    "branches": 2
+  },
+  {
+    "file": "Cards\\JueDou.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\LeZhuGeGuoChengYan.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\MouFaZhengXiXing.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\MouGuanPingWuWei.cs",
+    "branches": 2
+  },
+  {
+    "file": "Cards\\MouGuanYuJuAo.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\MouJiangWeiJueMouYin.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\MouPangTongHongCe.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\MouPangTongYinMouYang.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\NanManRuQin.cs",
+    "branches": 4
+  },
+  {
+    "file": "Cards\\PangHongPingZhiYin.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\Sha.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\ShangYu.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\ShenHuangZhongLieCang.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\ShenMaChaoShouLi.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\ShenPangTongFengLiaoYin.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\ShenZhangFeiShenCai.cs",
+    "branches": 2
+  },
+  {
+    "file": "Cards\\WanJianQiFa.cs",
+    "branches": 4
+  },
+  {
+    "file": "Cards\\WeiLiuBeiLieXiang.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\WeiZhangXingCaiHuangNu.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\WuGuanYuWuYou.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\WuSeSha.cs",
+    "branches": 2
+  },
+  {
+    "file": "Cards\\XingFaZhengZhiJi.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\YiZhenQingMeng.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\ZhangYiMuRui.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\ZhugeJunGengDu.cs",
+    "branches": 1
+  },
+  {
+    "file": "Charaters\\WuZhugeliangMeshAnimation.cs",
+    "branches": 14
+  },
+  {
+    "file": "Charaters\\YjcmCreatureVisuals.cs",
+    "branches": 2
+  },
+  {
+    "file": "Enchantments\\YjcmMusicEnchantments.cs",
+    "branches": 2
+  },
+  {
+    "file": "Equipment\\EquipCmd.cs",
+    "branches": 2
+  },
+  {
+    "file": "Orbs\\ChiTuOrb.cs",
+    "branches": 1
+  },
+  {
+    "file": "Patches\\WuZhugeliangSkinPatch.cs",
+    "branches": 33
+  },
+  {
+    "file": "Patches\\YjcmPatches.cs",
+    "branches": 12
+  },
+  {
+    "file": "Powers\\KuangFengPower.cs",
+    "branches": 1
+  },
+  {
+    "file": "Powers\\LieCangDiJiPower.cs",
+    "branches": 1
+  },
+  {
+    "file": "Powers\\LieCangLiFengPower.cs",
+    "branches": 1
+  },
+  {
+    "file": "Powers\\MouSimaYiPowers.cs",
+    "branches": 2
+  },
+  {
+    "file": "Powers\\ShenCaiJudgmentPower.cs",
+    "branches": 4
+  },
+  {
+    "file": "Powers\\ShouLiPower.cs",
+    "branches": 1
+  },
+  {
+    "file": "Powers\\XingPower.cs",
+    "branches": 1
+  },
+  {
+    "file": "Relics\\NewSharedRelics.cs",
+    "branches": 3
+  },
+  {
+    "file": "Relics\\YjcmJieQingShi.cs",
+    "branches": 1
+  },
+  {
+    "file": "Relics\\YjcmQingShi.cs",
+    "branches": 1
+  },
+  {
+    "file": "MainFile.cs",
+    "branches": 12
+  },
+  {
+    "file": "Cards\\Generated\\WeiDongZhuoJueDou.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\Generated\\WeiDongZhuoNanManRuQin.cs",
+    "branches": 2
+  },
+  {
+    "file": "Cards\\Generated\\WeiDongZhuoSha.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\Generated\\WeiDongZhuoShenHuangZhongLieCang.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\Generated\\WeiDongZhuoShenMaChaoShouLi.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\Generated\\WeiDongZhuoShenPangTongFengLiaoYin.cs",
+    "branches": 1
+  },
+  {
+    "file": "Cards\\Generated\\WeiDongZhuoShenZhangFeiShenCai.cs",
+    "branches": 2
+  },
+  {
+    "file": "Cards\\Generated\\WeiDongZhuoWanJianQiFa.cs",
+    "branches": 2
+  },
+  {
+    "file": "Cards\\Generated\\WeiDongZhuoWuSeSha.cs",
+    "branches": 1
+  }
+]

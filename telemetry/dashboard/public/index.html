@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>一将成名 · 遥测仪表盘</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="masthead">
+        <div>
+          <p class="eyebrow">YJCM TELEMETRY</p>
+          <h1>战局观星台</h1>
+          <p class="subtitle">分别查看武诸葛亮与威董卓的卡牌选择、战果与跑局质量。</p>
+        </div>
+        <div class="toolbar">
+          <label>
+            角色
+            <select id="character">
+              <option value="all">全部角色</option>
+              <option value="wu_zhugeliang">武诸葛亮</option>
+              <option value="wei_dong_zhuo">威董卓</option>
+            </select>
+          </label>
+          <label>
+            时间范围
+            <select id="range">
+              <option value="7">最近 7 天</option>
+              <option value="30" selected>最近 30 天</option>
+              <option value="90">最近 90 天</option>
+              <option value="365">最近一年</option>
+              <option value="0">全部数据</option>
+            </select>
+          </label>
+          <button id="refresh" type="button">刷新数据</button>
+        </div>
+      </header>
+
+      <div id="status" class="status">正在连接 PostHog…</div>
+      <section id="summary" class="summary" aria-label="核心指标"></section>
+
+      <section class="grid two">
+        <article class="panel sima-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="kicker">BOSS OUTCOME</p>
+              <h2>谋司马懿战果</h2>
+            </div>
+            <span id="sima-sample" class="sample"></span>
+          </div>
+          <div id="sima-bars" class="outcome-bars"></div>
+          <p class="hint">击杀率与被击杀率只以实际进入谋司马懿战斗的跑局为分母。</p>
+        </article>
+
+        <article class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="kicker">ACTIVITY</p>
+              <h2>每日跑局趋势</h2>
+            </div>
+          </div>
+          <svg id="trend" class="trend" role="img" aria-label="每日跑局趋势图"></svg>
+          <div class="legend"><span><i class="run-dot"></i>跑局</span><span><i class="boss-dot"></i>谋司马懿遭遇</span></div>
+        </article>
+      </section>
+
+      <section class="panel card-panel">
+        <div class="panel-heading card-heading">
+          <div>
+            <p class="kicker">CARD PICK RATE</p>
+            <h2>卡牌抓取率</h2>
+          </div>
+          <div class="filters">
+            <input id="card-search" type="search" placeholder="搜索卡牌名称或 ID" />
+            <label class="check"><input id="mod-only" type="checkbox" checked /> 仅本 Mod 卡牌</label>
+            <label>最少出现 <select id="min-offered"><option>1</option><option selected>5</option><option>10</option><option>25</option></select> 次</label>
+            <label>排序 <select id="card-sort">
+              <option value="offered_desc" selected>出现次数（高到低）</option>
+              <option value="pick_rate_desc">抓取率（高到低）</option>
+              <option value="picked_desc">选取次数（高到低）</option>
+              <option value="name_asc">卡牌名称（正序）</option>
+            </select></label>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>卡牌</th><th>出现</th><th>选取</th><th>抓取率</th><th class="bar-column">比例</th></tr></thead>
+            <tbody id="card-rows"></tbody>
+          </table>
+        </div>
+        <p class="hint">抓取率 = 被选次数 ÷ 在卡牌奖励中出现次数；跳过与重掷前出现的牌计入“出现”。</p>
+      </section>
+
+      <section class="grid three">
+        <article class="panel compact"><p class="kicker">VERSIONS</p><h2>游戏版本</h2><div id="versions" class="rank-list"></div></article>
+        <article class="panel compact"><p class="kicker">CHARACTERS</p><h2>角色分布</h2><div id="characters" class="rank-list"></div></article>
+        <article class="panel compact"><p class="kicker">DEATHS</p><h2>常见死亡遭遇</h2><div id="deaths" class="rank-list"></div></article>
+      </section>
+
+      <section class="panel recommendations">
+        <p class="kicker">NEXT SIGNALS</p>
+        <h2>建议持续观察</h2>
+        <div class="recommendation-grid">
+          <div><strong>进阶与角色分层</strong><span>避免总体胜率掩盖高进阶或特定角色的失衡。</span></div>
+          <div><strong>卡牌样本量</strong><span>低样本的高抓取率不稳定，至少累计 25 次出现再判断。</span></div>
+          <div><strong>异常 / 会话</strong><span>版本更新后异常率突然上升，通常意味着兼容性回归。</span></div>
+          <div><strong>楼层与死亡点</strong><span>平均到达楼层和死亡遭遇可以定位难度尖峰。</span></div>
+        </div>
+      </section>
+      <footer>只读本地仪表盘 · 角色筛选作用于跑局、卡牌与战果；会话和异常保持全 Mod 口径 · 查询密钥仅由 127.0.0.1 上的本地后端使用</footer>
+    </div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

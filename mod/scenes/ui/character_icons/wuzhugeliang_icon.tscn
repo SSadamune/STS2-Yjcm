@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctgdmu73iiem"]
+
+[ext_resource type="Texture2D" uid="uid://ciconnewtop01" path="res://images/ui/top_panel/character_icon_wuzhugeliang_new.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bgnoyjlecmqcl" path="res://Yjcm/Images/ui/run_history/character_icon_wuzhugeliang.png" id="2_52is3"]
+
+[node name="WuZhugeliangIcon" type="TextureRect"]
+texture = ExtResource("1")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="CharacterIconWuzhugeliang" type="Sprite2D" parent="."]
+position = Vector2(27, 27)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_52is3")

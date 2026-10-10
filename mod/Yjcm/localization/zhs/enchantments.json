@@ -1,0 +1,9 @@
+{
+  "YJCM_ENCHANTMENT_TAN_BAN.title": "檀板",
+  "YJCM_ENCHANTMENT_TAN_BAN.description": "保留。打出此牌后，可选择一张未附魔檀板的手牌，将其免费打出。",
+  "YJCM_ENCHANTMENT_TAN_BAN.select_prompt": "檀板：选择一张牌免费打出（可跳过）",
+  "YJCM_ENCHANTMENT_HU_JIA.title": "胡笳",
+  "YJCM_ENCHANTMENT_HU_JIA.description": "保留。回合结束时，若此牌在手牌中，获得5点格挡。此牌进入弃牌堆时，将与其费用不同的0至3费随机牌各一张加入手牌；它们本回合免费，并获得虚无与消耗。",
+  "YJCM_ENCHANTMENT_JIAO_WEI.title": "弦",
+  "YJCM_ENCHANTMENT_JIAO_WEI.description": "保留。此牌进入弃牌堆时，获得1层缓冲。"
+}

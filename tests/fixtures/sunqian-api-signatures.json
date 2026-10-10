@@ -1,0 +1,31 @@
+{
+  "source": "https://github.com/SSadamune/STS2-Sunqian-Universe",
+  "commit": "5c631501",
+  "type": "Squ.Api.SunqianUniversePublicApi, sunqian-universe",
+  "isReady": true,
+  "methods": {
+    "IsCharacterMechanicBound": "bool(CardModel?card)",
+    "IsSupportingActorCharacter": "bool(CharacterModel?character)",
+    "HasSupportingActorInCombat": "bool()",
+    "IsBurningPower": "bool(PowerModel?power)",
+    "CreateBurningHoverTip": "IHoverTip()",
+    "ApplyBurning": "Task<PowerModel?>(PlayerChoiceContextchoiceContext,Creaturetarget,decimalamount,Creature?applier,CardModel?cardSource,boolsilent=false)",
+    "IsScriptPower": "bool(PowerModel?power)",
+    "GetActiveScript": "PowerModel?(Creature?creature)",
+    "HasActiveScript": "bool(Creature?creature)",
+    "ApplyScriptPower": "Task(PlayerChoiceContextchoiceContext,PowerModelscriptPower,Creaturetarget,decimalamount,Creature?applier,CardModel?cardSource,boolsilent=false)",
+    "InvalidateScripts": "Task(Creaturecreature)",
+    "RemoveScript": "Task(PowerModelpower,boolnotifyLift=true)",
+    "GetScriptLiftsThisTurn": "int(Player?player)",
+    "CreateSlightRevisionHoverTip": "IHoverTip()",
+    "GrantSlightRevision": "bool(CardModelcard,CardModeltarget,booltargetUpgraded=false)",
+    "SetSlightRevision": "void(CardModelcard,CardModeltarget,booltargetUpgraded=false)",
+    "HasSlightRevision": "bool(CardModel?card)",
+    "GetSlightRevisionTarget": "CardModel?(CardModel?card)",
+    "IsSlightRevisionTargetUpgraded": "bool(CardModel?card)",
+    "CanExecuteSlightRevision": "bool(Playerplayer,CardModel?card)",
+    "RequestSlightRevision": "bool(Playerplayer,CardModelcard)",
+    "AddSlightRevisionDescription": "void(LocStringdescription,CardModeltarget,booltargetUpgraded=false)",
+    "GetSlightRevisionHoverTips": "IEnumerable<IHoverTip>(CardModeltarget,booltargetUpgraded=false)"
+  }
+}

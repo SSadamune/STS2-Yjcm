@@ -1,0 +1,19 @@
+<Project Sdk="Godot.NET.Sdk/4.5.1">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <AssemblyName>Yjcm</AssemblyName>
+    <RootNamespace>Yjcm</RootNamespace>
+    <!-- Both characters are always built. Keep the historic guard until its usages are audited. -->
+    <DefineConstants>$(DefineConstants);WEI_DONG_ZHUO</DefineConstants>
+    <DefineConstants Condition="'$(Variant)' == 'beta'">$(DefineConstants);GAME_BETA</DefineConstants>
+    <OutputPath>$(RepositoryRoot)artifacts/bin/Yjcm/$(Variant)/$(Configuration)/</OutputPath>
+  </PropertyGroup>
+  <Import Project="../dependencies/GameReferences.props" />
+  <ItemGroup>
+    <Compile Include="src/**/*.cs" />
+    <AdditionalFiles Include="Yjcm/localization/zhs/*.json" />
+  </ItemGroup>
+</Project>

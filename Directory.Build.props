@@ -1,0 +1,12 @@
+<Project>
+  <PropertyGroup>
+    <Variant Condition="'$(Variant)' == '' and '$(GameApiVariant)' != ''">$(GameApiVariant)</Variant>
+    <Variant Condition="'$(Variant)' == ''">stable</Variant>
+    <GameApiVariant>$(Variant)</GameApiVariant>
+    <RepositoryRoot>$(MSBuildThisFileDirectory)</RepositoryRoot>
+    <BaseIntermediateOutputPath>$(RepositoryRoot)artifacts/obj/$(MSBuildProjectName)/$(Variant)/</BaseIntermediateOutputPath>
+    <MSBuildProjectExtensionsPath>$(BaseIntermediateOutputPath)</MSBuildProjectExtensionsPath>
+    <BaseOutputPath>$(RepositoryRoot)artifacts/bin/$(MSBuildProjectName)/$(Variant)/</BaseOutputPath>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+</Project>

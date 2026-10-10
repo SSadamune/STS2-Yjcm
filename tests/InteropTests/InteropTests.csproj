@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GameApiVariant Condition="'$(GameApiVariant)' == ''">stable</GameApiVariant>
+  </PropertyGroup>
+  <Import Project="../../dependencies/GameReferences.props" />
+  <ItemGroup>
+    <!-- Compile the tutorial proxy with RitsuLib, never reference Yjcm.dll. -->
+    <Compile Include="../../docs/interop/examples/YjcmInterop.cs" Link="YjcmInterop.cs" />
+    <Compile Include="../../docs/interop/examples/YjcmGameplayInterop.cs" Link="YjcmGameplayInterop.cs" />
+  </ItemGroup>
+</Project>

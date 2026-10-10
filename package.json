@@ -1,0 +1,14 @@
+{
+  "name": "yjcm-development-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node tools/check-repository.mjs",
+    "generate": "node tools/generate_cards.mjs --write"
+  },
+  "devDependencies": {
+    "@esotericsoftware/spine-core": "4.2.119",
+    "@esotericsoftware/spine-webgl": "4.2.119",
+    "playwright-core": "1.62.1"
+  }
+}

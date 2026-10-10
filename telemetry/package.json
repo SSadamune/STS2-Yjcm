@@ -1,0 +1,23 @@
+{
+  "name": "wuzhugeliang-telemetry-worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/index.js",
+    "test": "node --test",
+    "dev": "set XDG_CONFIG_HOME=%CD%\\.config&& wrangler dev",
+    "deploy": "set XDG_CONFIG_HOME=%CD%\\.config&& wrangler deploy",
+    "deploy:dry": "set XDG_CONFIG_HOME=%CD%\\.config&& wrangler deploy --dry-run",
+    "login": "set XDG_CONFIG_HOME=%CD%\\.config&& wrangler login",
+    "secret:put": "set XDG_CONFIG_HOME=%CD%\\.config&& wrangler secret put POSTHOG_API_KEY",
+    "secret:list": "set XDG_CONFIG_HOME=%CD%\\.config&& wrangler secret list",
+    "dashboard:setup": "node dashboard/setup.mjs",
+    "dashboard": "node dashboard/server.mjs --open",
+    "dashboard:check": "node --check dashboard/server.mjs && node --check dashboard/setup.mjs && node --check dashboard/analytics.mjs && node --check dashboard/posthog.mjs && node --check dashboard/snapshot-cache.mjs && node --check dashboard/public/app.js",
+    "dashboard:test": "node --test dashboard/test/*.test.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

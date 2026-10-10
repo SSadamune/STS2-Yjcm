@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://Yjcm/Images/characters/wuzhugeliang_rest_site.png" id="1_restsite"]
+
+[node name="WuzhugeliangRestSite" type="Node2D"]
+
+[node name="ControlRoot" type="Control" parent="."]
+
+[node name="Visuals" type="Sprite2D" parent="ControlRoot"]
+position = Vector2(0, -51.7)
+scale = Vector2(0.63405128, 0.64634948)
+texture = ExtResource("1_restsite")
+
+[node name="Hitbox" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+offset_left = -190.0
+offset_top = -310.0
+offset_right = 190.0
+offset_bottom = 207.0
+
+[node name="SelectionReticle" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+offset_left = -200.0
+offset_top = -320.0
+offset_right = 200.0
+offset_bottom = 217.0
+
+[node name="ThoughtBubbleRight" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+offset_left = 121.0
+offset_top = -125.0
+offset_right = 121.0
+offset_bottom = -125.0
+
+[node name="ThoughtBubbleLeft" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+offset_left = -113.0
+offset_top = -95.0
+offset_right = -113.0
+offset_bottom = -95.0

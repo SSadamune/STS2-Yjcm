@@ -1,0 +1,189 @@
+{
+  "coordinateSystem": "Spine world units, Y up, loader scale 1, skeleton offset (0,0)",
+  "bounds": {
+    "combat": {
+      "minX": -739.383,
+      "minY": -490.829,
+      "maxX": 336.539,
+      "maxY": 412.531,
+      "width": 1075.922,
+      "height": 903.36,
+      "centerX": -201.422,
+      "centerY": -39.149
+    },
+    "sceneWithoutSmoke": {
+      "minX": -1481.714,
+      "minY": -845.97,
+      "maxX": 1362.162,
+      "maxY": 615.475,
+      "width": 2843.876,
+      "height": 1461.445,
+      "centerX": -59.776,
+      "centerY": -115.247
+    },
+    "coreBodyWithoutCapeRibbons": {
+      "minX": -739.383,
+      "minY": -490.829,
+      "maxX": 336.539,
+      "maxY": 328.447,
+      "width": 1075.922,
+      "height": 819.276,
+      "centerX": -201.422,
+      "centerY": -81.191
+    },
+    "backgroundByAnimation": {
+      "play": {
+        "minX": -1456.948,
+        "minY": -760.609,
+        "maxX": 1331.166,
+        "maxY": 615.475,
+        "width": 2788.114,
+        "height": 1376.084,
+        "centerX": -62.891,
+        "centerY": -72.567
+      },
+      "play2": {
+        "minX": -1481.714,
+        "minY": -845.97,
+        "maxX": 1362.162,
+        "maxY": 615.475,
+        "width": 2843.876,
+        "height": 1461.445,
+        "centerX": -59.776,
+        "centerY": -115.247
+      }
+    }
+  },
+  "godotYDown": {
+    "combatByAnimation": {
+      "play": {
+        "x": -730.189,
+        "y": -412.531,
+        "width": 1014.649,
+        "height": 826.175,
+        "minX": -730.189,
+        "maxX": 284.46,
+        "minY": -412.531,
+        "maxY": 413.644,
+        "centerX": -222.865,
+        "centerY": 0.556
+      },
+      "play2": {
+        "x": -739.383,
+        "y": -412.531,
+        "width": 1075.922,
+        "height": 903.36,
+        "minX": -739.383,
+        "maxX": 336.539,
+        "minY": -412.531,
+        "maxY": 490.829,
+        "centerX": -201.422,
+        "centerY": 39.149
+      }
+    },
+    "backgroundWithoutSmokeByAnimation": {
+      "play": {
+        "x": -1456.948,
+        "y": -615.475,
+        "width": 2788.114,
+        "height": 1376.084,
+        "minX": -1456.948,
+        "maxX": 1331.166,
+        "minY": -615.475,
+        "maxY": 760.609,
+        "centerX": -62.891,
+        "centerY": 72.567
+      },
+      "play2": {
+        "x": -1481.714,
+        "y": -615.475,
+        "width": 2843.876,
+        "height": 1461.445,
+        "minX": -1481.714,
+        "maxX": 1362.162,
+        "minY": -615.475,
+        "maxY": 845.97,
+        "centerX": -59.776,
+        "centerY": 115.247
+      }
+    },
+    "combatBothAnimations": {
+      "x": -739.383,
+      "y": -412.531,
+      "width": 1075.922,
+      "height": 903.36,
+      "minX": -739.383,
+      "maxX": 336.539,
+      "minY": -412.531,
+      "maxY": 490.829,
+      "centerX": -201.422,
+      "centerY": 39.149
+    },
+    "sceneBothAnimations": {
+      "x": -1481.714,
+      "y": -615.475,
+      "width": 2843.876,
+      "height": 1461.445,
+      "minX": -1481.714,
+      "maxX": 1362.162,
+      "minY": -615.475,
+      "maxY": 845.97,
+      "centerX": -59.776,
+      "centerY": 115.247
+    }
+  },
+  "presets": {
+    "combat480x480": {
+      "width": 480,
+      "height": 480,
+      "padding": 24,
+      "scale": 0.4015160950329113,
+      "screenOrigin": {
+        "x": 320.87417489371904,
+        "y": 224.28104639555656
+      },
+      "note": "screenX = origin.x + worldX * scale; screenY = origin.y - worldY * scale; origin is NOT the root bone translation"
+    },
+    "combat640x600": {
+      "width": 640,
+      "height": 600,
+      "padding": 30,
+      "scale": 0.5390725349978902,
+      "screenOrigin": {
+        "x": 428.58106814434507,
+        "y": 278.8958493273676
+      },
+      "note": "screenX = origin.x + worldX * scale; screenY = origin.y - worldY * scale; origin is NOT the root bone translation"
+    },
+    "lobby1280x800": {
+      "width": 1280,
+      "height": 800,
+      "padding": 32,
+      "scale": 0.4275854502798293,
+      "screenOrigin": {
+        "x": 665.5593478759271,
+        "y": 350.7220596116005
+      },
+      "note": "screenX = origin.x + worldX * scale; screenY = origin.y - worldY * scale; origin is NOT the root bone translation"
+    },
+    "lobby1920x1080": {
+      "width": 1920,
+      "height": 1080,
+      "padding": 48,
+      "scale": 0.641378175419744,
+      "screenOrigin": {
+        "x": 998.3390218138907,
+        "y": 466.08308941740074
+      },
+      "note": "screenX = origin.x + worldX * scale; screenY = origin.y - worldY * scale; origin is NOT the root bone translation"
+    }
+  },
+  "layerOrder": [
+    "Background/background.skel",
+    "Character/character.skel"
+  ],
+  "layerAlignment": "Both layers use SAME scale, offset, animation name and time. Do not auto-center each layer separately.",
+  "rootCaution": "Original root=(-4702.76,2976.69); child translations cancel it. Keep bone transforms, use skeleton/node external translation.",
+  "combatCaution": "Use Combat/character.skel + Combat/character.atlas + original-named PNG. No Background node.",
+  "estimates": "Animation bounds sampled at 60 Hz plus keys; use margin. Do not use all FX geometry as auto-fit bounds."
+}

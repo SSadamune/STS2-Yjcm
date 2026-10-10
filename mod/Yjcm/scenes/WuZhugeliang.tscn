@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://dugms3ubrwefm"]
+
+[ext_resource type="Texture2D" uid="uid://btsi33842west" path="res://Yjcm/Images/Charui/character_icon_char_name.png" id="1_tex"]
+
+[node name="Inklet" type="Node2D"]
+position = Vector2(-537, -296.00006)
+scale = Vector2(0.48498854, 0.47711137)
+metadata/_edit_group_ = true
+
+[node name="visual" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-214.43799, -364.69458)
+texture = ExtResource("1_tex")
+
+[node name="Bounds" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -69.0
+offset_top = -187.0
+offset_right = 71.0
+mouse_filter = 2
+
+[node name="CenterPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -93)
+
+[node name="IntentPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -221)

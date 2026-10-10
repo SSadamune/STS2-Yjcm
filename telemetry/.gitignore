@@ -1,0 +1,9 @@
+node_modules/
+.npm-cache/
+.config/
+.wrangler/
+.dev.vars
+.env
+npm-debug.log*
+dashboard/config.local.json
+dashboard/runtime.*.log

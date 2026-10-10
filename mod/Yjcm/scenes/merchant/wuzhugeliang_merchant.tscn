@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" uid="uid://cw0hmrchntat" path="res://Yjcm/Images/characters/wuzhugeliang_merchant.png" id="1_merchant"]
+
+[node name="WuzhugeliangMerchant" type="Node2D"]
+
+[node name="Visuals" type="Sprite2D" parent="."]
+scale = Vector2(0.63405128, 0.64634948)
+texture = ExtResource("1_merchant")
+position = Vector2(0, -258.4)

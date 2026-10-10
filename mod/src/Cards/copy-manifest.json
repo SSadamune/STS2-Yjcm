@@ -1,0 +1,2050 @@
+{
+  "scope": "群雄+神武将+全部通用基础牌/锦囊/装备；神标签优先，其他魏蜀吴专属及其 tokens 排除",
+  "variant": "both",
+  "gameApi": [
+    "0.107.1",
+    "0.111.0"
+  ],
+  "mainNamespace": "Yjcm",
+  "frame": "card_frame_weidongzhuo",
+  "energyColor": "ironclad",
+  "primaryColor": "#B98A31",
+  "darkColor": "#5A3825",
+  "groups": {
+    "basic": [
+      "Sha",
+      "Shan",
+      "Jiu",
+      "Tao"
+    ],
+    "trick": [
+      "LeBuSiShu",
+      "WuZhongShengYou",
+      "HuoGong",
+      "JueDou",
+      "TieSuoLianHuan",
+      "NanManRuQin",
+      "WanJianQiFa"
+    ],
+    "weapon": [
+      "QingLongYanYueDao",
+      "GuanShiFu",
+      "ZhuQueYuShan",
+      "ZhuGeLianNu",
+      "HanBingJian",
+      "ZhangBaSheMao",
+      "QingGangJian",
+      "CiXiongShuangGuJian"
+    ],
+    "armor": [
+      "RenWangDun",
+      "BaGuaZhen",
+      "BaiYinShiZi"
+    ],
+    "mount": [
+      "DiLu",
+      "ChiTu",
+      "JueYing",
+      "ZiXing"
+    ],
+    "general": [
+      "ShenHuangZhongLieCang",
+      "ShenHuangZhongZhanJue",
+      "ShenJiangWeiPingXiang",
+      "ShenJiangWeiTianRen",
+      "ShenMaChaoShouLi",
+      "ShenPangTongFengLiaoYang",
+      "ShenZhangFeiShenCai",
+      "ShenZhangFeiXunShi",
+      "ShenZhaoYunLongHun",
+      "ShenZhugeliangDaWu",
+      "ShenZhugeliangKuangFeng",
+      "ShenZhugeliangQiXing"
+    ],
+    "token": [
+      "WuSeSha",
+      "ShenPangTongFengLiaoYin",
+      "LieCangOption1",
+      "LieCangOption2",
+      "LieCangOption3",
+      "LieCangOption4",
+      "LieCangOption5",
+      "ZhanJueOption1",
+      "ZhanJueOption2"
+    ]
+  },
+  "cards": [
+    {
+      "originalType": "Sha",
+      "cloneType": "WeiDongZhuoSha",
+      "originalId": "YJCM_CARD_SHA",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_SHA",
+      "category": "basic",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/Sha.cs",
+      "generatedTypes": [],
+      "sourceSha256": "772e11a6fe3f0f5b2a8c134af50430b9d60d046f8fddd25c17c0f7a5766439dc",
+      "token": false
+    },
+    {
+      "originalType": "Shan",
+      "cloneType": "WeiDongZhuoShan",
+      "originalId": "YJCM_CARD_SHAN",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_SHAN",
+      "category": "basic",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/Shan.cs",
+      "generatedTypes": [],
+      "sourceSha256": "10327b1f06e51aa72af39dcaa2d508c704b5600d74259183e11b2deeef2635ca",
+      "token": false
+    },
+    {
+      "originalType": "Jiu",
+      "cloneType": "WeiDongZhuoJiu",
+      "originalId": "YJCM_CARD_JIU",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_JIU",
+      "category": "basic",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/Jiu.cs",
+      "generatedTypes": [],
+      "sourceSha256": "2dbe7d452ec4eb48312ecb8d47ae711f55c4cd13e9aee2f029a7bcf1c5a20841",
+      "token": false
+    },
+    {
+      "originalType": "Tao",
+      "cloneType": "WeiDongZhuoTao",
+      "originalId": "YJCM_CARD_TAO",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_TAO",
+      "category": "basic",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/Tao.cs",
+      "generatedTypes": [],
+      "sourceSha256": "78fc9c283f9c7692d79b3dea1859a3c26f2dbcb5b564ccba891aa535de376461",
+      "token": false
+    },
+    {
+      "originalType": "LeBuSiShu",
+      "cloneType": "WeiDongZhuoLeBuSiShu",
+      "originalId": "YJCM_CARD_LE_BU_SI_SHU",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_LE_BU_SI_SHU",
+      "category": "trick",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/LeBuSiShu.cs",
+      "generatedTypes": [],
+      "sourceSha256": "4407dbc280a3a5af94810c6dc225301db82f3ba0a3ea6be5b24a8614de1f5138",
+      "token": false
+    },
+    {
+      "originalType": "WuZhongShengYou",
+      "cloneType": "WeiDongZhuoWuZhongShengYou",
+      "originalId": "YJCM_CARD_WU_ZHONG_SHENG_YOU",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_WU_ZHONG_SHENG_YOU",
+      "category": "trick",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/WuZhongShengYou.cs",
+      "generatedTypes": [],
+      "sourceSha256": "2dd749509f34f6595230b08a40cf895873f128bae12915b972c33b48632282d0",
+      "token": false
+    },
+    {
+      "originalType": "HuoGong",
+      "cloneType": "WeiDongZhuoHuoGong",
+      "originalId": "YJCM_CARD_HUO_GONG",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_HUO_GONG",
+      "category": "trick",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/HuoGong.cs",
+      "generatedTypes": [],
+      "sourceSha256": "25e6ce1901e82762c11aab3ece1b6713bb5be690920d6ac53bddc6ed06d2faa1",
+      "token": false
+    },
+    {
+      "originalType": "JueDou",
+      "cloneType": "WeiDongZhuoJueDou",
+      "originalId": "YJCM_CARD_JUE_DOU",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_JUE_DOU",
+      "category": "trick",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/JueDou.cs",
+      "generatedTypes": [],
+      "sourceSha256": "9e0673a656749b2d00948cd6471bfd94d3e1a74805fe9ad7cf74fc0970e1e63a",
+      "token": false
+    },
+    {
+      "originalType": "TieSuoLianHuan",
+      "cloneType": "WeiDongZhuoTieSuoLianHuan",
+      "originalId": "YJCM_CARD_TIE_SUO_LIAN_HUAN",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_TIE_SUO_LIAN_HUAN",
+      "category": "trick",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/TieSuoLianHuan.cs",
+      "generatedTypes": [],
+      "sourceSha256": "601eeb782f760b7c2ad616a6c7e14aa0f2acc22dacb2ec2171b1fd10ac416005",
+      "token": false
+    },
+    {
+      "originalType": "NanManRuQin",
+      "cloneType": "WeiDongZhuoNanManRuQin",
+      "originalId": "YJCM_CARD_NAN_MAN_RU_QIN",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_NAN_MAN_RU_QIN",
+      "category": "trick",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/NanManRuQin.cs",
+      "generatedTypes": [],
+      "sourceSha256": "107efe820efd20cbb051d20ab49e9d107e196b8636f7ecba40f9222d3f7cac0a",
+      "token": false
+    },
+    {
+      "originalType": "WanJianQiFa",
+      "cloneType": "WeiDongZhuoWanJianQiFa",
+      "originalId": "YJCM_CARD_WAN_JIAN_QI_FA",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_WAN_JIAN_QI_FA",
+      "category": "trick",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/WanJianQiFa.cs",
+      "generatedTypes": [],
+      "sourceSha256": "c486a7d8a600f5c0f7360de6804c4e0e061f67a35bcf7520957cfe30e234d378",
+      "token": false
+    },
+    {
+      "originalType": "QingLongYanYueDao",
+      "cloneType": "WeiDongZhuoQingLongYanYueDao",
+      "originalId": "YJCM_CARD_QING_LONG_YAN_YUE_DAO",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_QING_LONG_YAN_YUE_DAO",
+      "category": "weapon",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/QingLongYanYueDao.cs",
+      "generatedTypes": [],
+      "sourceSha256": "9fdefc3fb272f7287e429a367ccadd67762a09b9aace7d6b0ad60b5b23d7e3f5",
+      "token": false
+    },
+    {
+      "originalType": "GuanShiFu",
+      "cloneType": "WeiDongZhuoGuanShiFu",
+      "originalId": "YJCM_CARD_GUAN_SHI_FU",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_GUAN_SHI_FU",
+      "category": "weapon",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/GuanShiFu.cs",
+      "generatedTypes": [],
+      "sourceSha256": "af13f0b4fb9f700b43ef44a8aff74482ee3644bfa9a462f910b4fb1ebbf29dfb",
+      "token": false
+    },
+    {
+      "originalType": "ZhuQueYuShan",
+      "cloneType": "WeiDongZhuoZhuQueYuShan",
+      "originalId": "YJCM_CARD_ZHU_QUE_YU_SHAN",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_ZHU_QUE_YU_SHAN",
+      "category": "weapon",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/ZhuQueYuShan.cs",
+      "generatedTypes": [],
+      "sourceSha256": "deffd04867d356d8ebd40c4314ff5b91efb4f203e3d534265ce2f9bf46bcda5d",
+      "token": false
+    },
+    {
+      "originalType": "ZhuGeLianNu",
+      "cloneType": "WeiDongZhuoZhuGeLianNu",
+      "originalId": "YJCM_CARD_ZHU_GE_LIAN_NU",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_ZHU_GE_LIAN_NU",
+      "category": "weapon",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/ZhuGeLianNu.cs",
+      "generatedTypes": [],
+      "sourceSha256": "e4ad40268a860b1520536b121cef8a4118c80ca277a121a66568f19239d230e9",
+      "token": false
+    },
+    {
+      "originalType": "HanBingJian",
+      "cloneType": "WeiDongZhuoHanBingJian",
+      "originalId": "YJCM_CARD_HAN_BING_JIAN",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_HAN_BING_JIAN",
+      "category": "weapon",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/HanBingJian.cs",
+      "generatedTypes": [],
+      "sourceSha256": "01e7cad7cb27d191e872e95d0be21b20bad9021d551b82309cfbd8644813c152",
+      "token": false
+    },
+    {
+      "originalType": "ZhangBaSheMao",
+      "cloneType": "WeiDongZhuoZhangBaSheMao",
+      "originalId": "YJCM_CARD_ZHANG_BA_SHE_MAO",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_ZHANG_BA_SHE_MAO",
+      "category": "weapon",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/ZhangBaSheMao.cs",
+      "generatedTypes": [],
+      "sourceSha256": "d94aeeae79cdde11fbf161e61cc31bbe292258930f151656edca77e4fcc19e4a",
+      "token": false
+    },
+    {
+      "originalType": "QingGangJian",
+      "cloneType": "WeiDongZhuoQingGangJian",
+      "originalId": "YJCM_CARD_QING_GANG_JIAN",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_QING_GANG_JIAN",
+      "category": "weapon",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/QingGangJian.cs",
+      "generatedTypes": [],
+      "sourceSha256": "95b0813e89631d2692dd015a9302e6f49ad8d5ed2899d459c7c30315d7269a3b",
+      "token": false
+    },
+    {
+      "originalType": "CiXiongShuangGuJian",
+      "cloneType": "WeiDongZhuoCiXiongShuangGuJian",
+      "originalId": "YJCM_CARD_CI_XIONG_SHUANG_GU_JIAN",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_CI_XIONG_SHUANG_GU_JIAN",
+      "category": "weapon",
+      "tags": [],
+      "originalPoolListed": false,
+      "source": "mod/src/Cards/CiXiongShuangGuJian.cs",
+      "generatedTypes": [],
+      "sourceSha256": "946eeace149d203fbc00483b6c41ac011501dc8e9243e7b79c3bbb55d477f2db",
+      "token": false
+    },
+    {
+      "originalType": "RenWangDun",
+      "cloneType": "WeiDongZhuoRenWangDun",
+      "originalId": "YJCM_CARD_REN_WANG_DUN",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_REN_WANG_DUN",
+      "category": "armor",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/RenWangDun.cs",
+      "generatedTypes": [],
+      "sourceSha256": "ed46de6adbf8f682b885a0421d3b9841714d026b432fac790250156518f50b97",
+      "token": false
+    },
+    {
+      "originalType": "BaGuaZhen",
+      "cloneType": "WeiDongZhuoBaGuaZhen",
+      "originalId": "YJCM_CARD_BA_GUA_ZHEN",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_BA_GUA_ZHEN",
+      "category": "armor",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/BaGuaZhen.cs",
+      "generatedTypes": [],
+      "sourceSha256": "23522be4dba44ede5e2866b64d5b59de6bdf9c73fad0a07af70424a27c4461a3",
+      "token": false
+    },
+    {
+      "originalType": "BaiYinShiZi",
+      "cloneType": "WeiDongZhuoBaiYinShiZi",
+      "originalId": "YJCM_CARD_BAI_YIN_SHI_ZI",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_BAI_YIN_SHI_ZI",
+      "category": "armor",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/BaiYinShiZi.cs",
+      "generatedTypes": [],
+      "sourceSha256": "e5bf00e118c18c088626eefe64ad68925a5149886d9719acaea94222fa8132da",
+      "token": false
+    },
+    {
+      "originalType": "DiLu",
+      "cloneType": "WeiDongZhuoDiLu",
+      "originalId": "YJCM_CARD_DI_LU",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_DI_LU",
+      "category": "mount",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/DiLu.cs",
+      "generatedTypes": [],
+      "sourceSha256": "3a5d1f0596d0b6263c64c8c37dffbac98f12dc35af127b2b28ab5bcb286f1e7f",
+      "token": false
+    },
+    {
+      "originalType": "ChiTu",
+      "cloneType": "WeiDongZhuoChiTu",
+      "originalId": "YJCM_CARD_CHI_TU",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_CHI_TU",
+      "category": "mount",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/ChiTu.cs",
+      "generatedTypes": [],
+      "sourceSha256": "53604255dc4153b641e73e9a6b1842630442127ddcff2b61ac52f87972d786ca",
+      "token": false
+    },
+    {
+      "originalType": "JueYing",
+      "cloneType": "WeiDongZhuoJueYing",
+      "originalId": "YJCM_CARD_JUE_YING",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_JUE_YING",
+      "category": "mount",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/JueYing.cs",
+      "generatedTypes": [],
+      "sourceSha256": "3b22947b0206b264480cfa1d7557b5142fee0315af1c443b672ad9b2ded44852",
+      "token": false
+    },
+    {
+      "originalType": "ZiXing",
+      "cloneType": "WeiDongZhuoZiXing",
+      "originalId": "YJCM_CARD_ZI_XING",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_ZI_XING",
+      "category": "mount",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/ZiXing.cs",
+      "generatedTypes": [],
+      "sourceSha256": "11b323ffc47b714361beff10767ca545145cbb8d8bb77967fdad8b875d345f1a",
+      "token": false
+    },
+    {
+      "originalType": "ShenHuangZhongLieCang",
+      "cloneType": "WeiDongZhuoShenHuangZhongLieCang",
+      "originalId": "YJCM_CARD_SHEN_HUANG_ZHONG_LIE_CANG",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_SHEN_HUANG_ZHONG_LIE_CANG",
+      "category": "general",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/ShenHuangZhongLieCang.cs",
+      "generatedTypes": [
+        "LieCangOption1",
+        "LieCangOption2",
+        "LieCangOption3",
+        "LieCangOption4",
+        "LieCangOption5"
+      ],
+      "sourceSha256": "a149e548bbc9a01af5e6f6ac181882cc3cb5a76eb3d5ab71b01c9e68e21f759f",
+      "token": false
+    },
+    {
+      "originalType": "ShenHuangZhongZhanJue",
+      "cloneType": "WeiDongZhuoShenHuangZhongZhanJue",
+      "originalId": "YJCM_CARD_SHEN_HUANG_ZHONG_ZHAN_JUE",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_SHEN_HUANG_ZHONG_ZHAN_JUE",
+      "category": "general",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/ShenHuangZhongZhanJue.cs",
+      "generatedTypes": [
+        "ZhanJueOption1",
+        "ZhanJueOption2"
+      ],
+      "sourceSha256": "b1bd2f45b7521122a76930927dc8ae42eeb9c5714877b51203f7addd5eae50b8",
+      "token": false
+    },
+    {
+      "originalType": "ShenJiangWeiPingXiang",
+      "cloneType": "WeiDongZhuoShenJiangWeiPingXiang",
+      "originalId": "YJCM_CARD_SHEN_JIANG_WEI_PING_XIANG",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_SHEN_JIANG_WEI_PING_XIANG",
+      "category": "general",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/ShenJiangWeiPingXiang.cs",
+      "generatedTypes": [],
+      "sourceSha256": "547d8c1f731afe64a162ab2c6d70430d2c749fa54fce0f14c0ce3de57f4edd31",
+      "token": false
+    },
+    {
+      "originalType": "ShenJiangWeiTianRen",
+      "cloneType": "WeiDongZhuoShenJiangWeiTianRen",
+      "originalId": "YJCM_CARD_SHEN_JIANG_WEI_TIAN_REN",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_SHEN_JIANG_WEI_TIAN_REN",
+      "category": "general",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/ShenJiangWeiTianRen.cs",
+      "generatedTypes": [],
+      "sourceSha256": "93306df309fb393c01a484945816b49699154bad699eb2f24ce10cb1c0ba78bf",
+      "token": false
+    },
+    {
+      "originalType": "ShenMaChaoShouLi",
+      "cloneType": "WeiDongZhuoShenMaChaoShouLi",
+      "originalId": "YJCM_CARD_SHEN_MA_CHAO_SHOU_LI",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_SHEN_MA_CHAO_SHOU_LI",
+      "category": "general",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "originalPoolListed": false,
+      "source": "mod/src/Cards/ShenMaChaoShouLi.cs",
+      "generatedTypes": [],
+      "sourceSha256": "f1815626f5b417e9b3efe1e4fdb3b9b078225ffa0b9722a24b9b832f4f01f4b3",
+      "token": false
+    },
+    {
+      "originalType": "ShenPangTongFengLiaoYang",
+      "cloneType": "WeiDongZhuoShenPangTongFengLiaoYang",
+      "originalId": "YJCM_CARD_SHEN_PANG_TONG_FENG_LIAO_YANG",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_SHEN_PANG_TONG_FENG_LIAO_YANG",
+      "category": "general",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/ShenPangTongFengLiaoYang.cs",
+      "generatedTypes": [
+        "ShenPangTongFengLiaoYin",
+        "ShenPangTongFengLiaoYin"
+      ],
+      "sourceSha256": "3c30dfbadd7008dfbd038fe8eb3601f026ec854ca6aee5a767dde8729184c14c",
+      "token": false
+    },
+    {
+      "originalType": "ShenZhangFeiShenCai",
+      "cloneType": "WeiDongZhuoShenZhangFeiShenCai",
+      "originalId": "YJCM_CARD_SHEN_ZHANG_FEI_SHEN_CAI",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_SHEN_ZHANG_FEI_SHEN_CAI",
+      "category": "general",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/ShenZhangFeiShenCai.cs",
+      "generatedTypes": [],
+      "sourceSha256": "6aef807ee91a915ceff1ebf5ad5fef715628f8c0d1a1e95ad4a20291b4830ef9",
+      "token": false
+    },
+    {
+      "originalType": "ShenZhangFeiXunShi",
+      "cloneType": "WeiDongZhuoShenZhangFeiXunShi",
+      "originalId": "YJCM_CARD_SHEN_ZHANG_FEI_XUN_SHI",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_SHEN_ZHANG_FEI_XUN_SHI",
+      "category": "general",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/ShenZhangFeiXunShi.cs",
+      "generatedTypes": [
+        "WuSeSha",
+        "WuSeSha"
+      ],
+      "sourceSha256": "0f94e37d7eefbb631cc78cc37771146ae74aaba11181b39c0f89adfde19a0417",
+      "token": false
+    },
+    {
+      "originalType": "ShenZhaoYunLongHun",
+      "cloneType": "WeiDongZhuoShenZhaoYunLongHun",
+      "originalId": "YJCM_CARD_SHEN_ZHAO_YUN_LONG_HUN",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_SHEN_ZHAO_YUN_LONG_HUN",
+      "category": "general",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/ShenZhaoYunLongHun.cs",
+      "generatedTypes": [],
+      "sourceSha256": "e4a6156c802cc6e9791fc83bd1c7f70c4b8515f5284004ef9549c92d2a6f2858",
+      "token": false
+    },
+    {
+      "originalType": "ShenZhugeliangDaWu",
+      "cloneType": "WeiDongZhuoShenZhugeliangDaWu",
+      "originalId": "YJCM_CARD_SHEN_ZHUGELIANG_DA_WU",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_SHEN_ZHUGELIANG_DA_WU",
+      "category": "general",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "originalPoolListed": false,
+      "source": "mod/src/Cards/ShenZhugeliangDaWu.cs",
+      "generatedTypes": [],
+      "sourceSha256": "f7e8ada833ce81612cbbd8805c06d91c301b17f349069164f4f88d83b3e609cf",
+      "token": false
+    },
+    {
+      "originalType": "ShenZhugeliangKuangFeng",
+      "cloneType": "WeiDongZhuoShenZhugeliangKuangFeng",
+      "originalId": "YJCM_CARD_SHEN_ZHUGELIANG_KUANG_FENG",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_SHEN_ZHUGELIANG_KUANG_FENG",
+      "category": "general",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "originalPoolListed": false,
+      "source": "mod/src/Cards/ShenZhugeliangKuangFeng.cs",
+      "generatedTypes": [],
+      "sourceSha256": "a0796e8459e45649780bcd85d2bbdf19cc5e533450bf8b1f6bedf14f1357d6b1",
+      "token": false
+    },
+    {
+      "originalType": "ShenZhugeliangQiXing",
+      "cloneType": "WeiDongZhuoShenZhugeliangQiXing",
+      "originalId": "YJCM_CARD_SHEN_ZHUGELIANG_QI_XING",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_SHEN_ZHUGELIANG_QI_XING",
+      "category": "general",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "originalPoolListed": false,
+      "source": "mod/src/Cards/ShenZhugeliangQiXing.cs",
+      "generatedTypes": [],
+      "sourceSha256": "e33bf256c6210b05e4331afce7567a8975ed0a10a20c5ca50f1b8b7f3f33b4b7",
+      "token": false
+    },
+    {
+      "originalType": "WuSeSha",
+      "cloneType": "WeiDongZhuoWuSeSha",
+      "originalId": "YJCM_CARD_WU_SE_SHA",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_WU_SE_SHA",
+      "category": "token",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/WuSeSha.cs",
+      "generatedTypes": [],
+      "sourceSha256": "1500696bb57e5035b5375c863fa5d97de7e4e05edf27d5ba40c51ffde5dfcacc",
+      "token": true
+    },
+    {
+      "originalType": "ShenPangTongFengLiaoYin",
+      "cloneType": "WeiDongZhuoShenPangTongFengLiaoYin",
+      "originalId": "YJCM_CARD_SHEN_PANG_TONG_FENG_LIAO_YIN",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_SHEN_PANG_TONG_FENG_LIAO_YIN",
+      "category": "token",
+      "tags": [],
+      "originalPoolListed": true,
+      "source": "mod/src/Cards/ShenPangTongFengLiaoYin.cs",
+      "generatedTypes": [
+        "ShenPangTongFengLiaoYang"
+      ],
+      "sourceSha256": "1c6bedb236a4ef39f7481ece50757684b6c63d2d9894fa584f18ca84fa799a4e",
+      "token": true
+    },
+    {
+      "originalType": "LieCangOption1",
+      "cloneType": "WeiDongZhuoLieCangOption1",
+      "originalId": "YJCM_CARD_LIE_CANG_OPTION1",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_LIE_CANG_OPTION1",
+      "category": "token",
+      "tags": [],
+      "originalPoolListed": false,
+      "source": "mod/src/Cards/ShenHuangZhongLieCang.cs",
+      "generatedTypes": [],
+      "sourceSha256": "a149e548bbc9a01af5e6f6ac181882cc3cb5a76eb3d5ab71b01c9e68e21f759f",
+      "token": true
+    },
+    {
+      "originalType": "LieCangOption2",
+      "cloneType": "WeiDongZhuoLieCangOption2",
+      "originalId": "YJCM_CARD_LIE_CANG_OPTION2",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_LIE_CANG_OPTION2",
+      "category": "token",
+      "tags": [],
+      "originalPoolListed": false,
+      "source": "mod/src/Cards/ShenHuangZhongLieCang.cs",
+      "generatedTypes": [],
+      "sourceSha256": "a149e548bbc9a01af5e6f6ac181882cc3cb5a76eb3d5ab71b01c9e68e21f759f",
+      "token": true
+    },
+    {
+      "originalType": "LieCangOption3",
+      "cloneType": "WeiDongZhuoLieCangOption3",
+      "originalId": "YJCM_CARD_LIE_CANG_OPTION3",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_LIE_CANG_OPTION3",
+      "category": "token",
+      "tags": [],
+      "originalPoolListed": false,
+      "source": "mod/src/Cards/ShenHuangZhongLieCang.cs",
+      "generatedTypes": [],
+      "sourceSha256": "a149e548bbc9a01af5e6f6ac181882cc3cb5a76eb3d5ab71b01c9e68e21f759f",
+      "token": true
+    },
+    {
+      "originalType": "LieCangOption4",
+      "cloneType": "WeiDongZhuoLieCangOption4",
+      "originalId": "YJCM_CARD_LIE_CANG_OPTION4",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_LIE_CANG_OPTION4",
+      "category": "token",
+      "tags": [],
+      "originalPoolListed": false,
+      "source": "mod/src/Cards/ShenHuangZhongLieCang.cs",
+      "generatedTypes": [],
+      "sourceSha256": "a149e548bbc9a01af5e6f6ac181882cc3cb5a76eb3d5ab71b01c9e68e21f759f",
+      "token": true
+    },
+    {
+      "originalType": "LieCangOption5",
+      "cloneType": "WeiDongZhuoLieCangOption5",
+      "originalId": "YJCM_CARD_LIE_CANG_OPTION5",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_LIE_CANG_OPTION5",
+      "category": "token",
+      "tags": [],
+      "originalPoolListed": false,
+      "source": "mod/src/Cards/ShenHuangZhongLieCang.cs",
+      "generatedTypes": [],
+      "sourceSha256": "a149e548bbc9a01af5e6f6ac181882cc3cb5a76eb3d5ab71b01c9e68e21f759f",
+      "token": true
+    },
+    {
+      "originalType": "ZhanJueOption1",
+      "cloneType": "WeiDongZhuoZhanJueOption1",
+      "originalId": "YJCM_CARD_ZHAN_JUE_OPTION1",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_ZHAN_JUE_OPTION1",
+      "category": "token",
+      "tags": [],
+      "originalPoolListed": false,
+      "source": "mod/src/Cards/ShenHuangZhongZhanJue.cs",
+      "generatedTypes": [],
+      "sourceSha256": "b1bd2f45b7521122a76930927dc8ae42eeb9c5714877b51203f7addd5eae50b8",
+      "token": true
+    },
+    {
+      "originalType": "ZhanJueOption2",
+      "cloneType": "WeiDongZhuoZhanJueOption2",
+      "originalId": "YJCM_CARD_ZHAN_JUE_OPTION2",
+      "cloneId": "YJCM_CARD_WEI_DONG_ZHUO_ZHAN_JUE_OPTION2",
+      "category": "token",
+      "tags": [],
+      "originalPoolListed": false,
+      "source": "mod/src/Cards/ShenHuangZhongZhanJue.cs",
+      "generatedTypes": [],
+      "sourceSha256": "b1bd2f45b7521122a76930927dc8ae42eeb9c5714877b51203f7addd5eae50b8",
+      "token": true
+    }
+  ],
+  "classification": [
+    {
+      "type": "BaGuaZhen",
+      "title": "八卦阵",
+      "tags": [],
+      "source": "mod/src/Cards/BaGuaZhen.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "BaiYinShiZi",
+      "title": "白银狮子",
+      "tags": [],
+      "source": "mod/src/Cards/BaiYinShiZi.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "BeiFa",
+      "title": "北伐",
+      "tags": [],
+      "source": "mod/src/Cards/BeiFa.cs",
+      "inOriginalPoolList": true,
+      "reason": "武诸葛亮专属：北伐；悬浮提示包含蜀，未声明武将 tag"
+    },
+    {
+      "type": "BeiZhiCard",
+      "title": "背置牌",
+      "tags": [],
+      "source": "mod/src/Cards/BeiZhiCard.cs",
+      "inOriginalPoolList": false,
+      "reason": "背置测试／角色生成牌，非通用杀闪锦囊装备"
+    },
+    {
+      "type": "CaiXia",
+      "title": "许靖-才瑕",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/CaiXia.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "ChenShiQingBei",
+      "title": "陈式-擎北",
+      "tags": [],
+      "source": "mod/src/Cards/ChenShiQingBei.cs",
+      "inOriginalPoolList": true,
+      "reason": "陈式专属擎北，漏标武将／蜀 tag"
+    },
+    {
+      "type": "ChiTu",
+      "title": "赤兔",
+      "tags": [],
+      "source": "mod/src/Cards/ChiTu.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "CiXiongShuangGuJian",
+      "title": "雌雄双股剑",
+      "tags": [],
+      "source": "mod/src/Cards/CiXiongShuangGuJian.cs",
+      "inOriginalPoolList": false,
+      "reason": "复制"
+    },
+    {
+      "type": "DiLu",
+      "title": "的卢",
+      "tags": [],
+      "source": "mod/src/Cards/DiLu.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "ShiWeiYanZhuangShi",
+      "title": "势魏延-壮誓",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/EventAncientCards.cs",
+      "inOriginalPoolList": false,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "ShiWeiYanZhuangShiAo",
+      "title": "势魏延-壮誓-傲",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/EventAncientCards.cs",
+      "inOriginalPoolList": false,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "ShiWeiYanZhongAo",
+      "title": "势魏延-忠傲",
+      "tags": [],
+      "source": "mod/src/Cards/EventAncientCards.cs",
+      "inOriginalPoolList": false,
+      "reason": "武诸葛亮事件任务牌：仅进入武诸葛亮牌组，不复制到威董卓通用包"
+    },
+    {
+      "type": "MouZhugeliangHuoJi",
+      "title": "谋诸葛亮-火计",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/EventAncientCards.cs",
+      "inOriginalPoolList": false,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "MouZhugeliangKongCheng",
+      "title": "谋诸葛亮-空城",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/EventAncientCards.cs",
+      "inOriginalPoolList": false,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "GuanPingLongYin",
+      "title": "关平-龙吟",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/GuanPingLongYin.cs",
+      "inOriginalPoolList": false,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "GuanShiFu",
+      "title": "贯石斧",
+      "tags": [],
+      "source": "mod/src/Cards/GuanShiFu.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "HanBingJian",
+      "title": "寒冰剑",
+      "tags": [],
+      "source": "mod/src/Cards/HanBingJian.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "HuangWudieShaXue",
+      "title": "黄舞蝶-铩雪",
+      "tags": [],
+      "source": "mod/src/Cards/HuangWudieShaXue.cs",
+      "inOriginalPoolList": true,
+      "reason": "蜀武将黄舞蝶生成 token"
+    },
+    {
+      "type": "HuangWudieShouXing",
+      "title": "黄舞蝶-狩星",
+      "tags": [],
+      "source": "mod/src/Cards/HuangWudieShouXing.cs",
+      "inOriginalPoolList": true,
+      "reason": "蜀武将黄舞蝶生成 token"
+    },
+    {
+      "type": "HuangWudieShuangRui",
+      "title": "黄舞蝶-双锐",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/HuangWudieShuangRui.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "HuoGong",
+      "title": "火攻",
+      "tags": [],
+      "source": "mod/src/Cards/HuoGong.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "JieDongFeng",
+      "title": "借东风",
+      "tags": [],
+      "source": "mod/src/Cards/JieDongFeng.cs",
+      "inOriginalPoolList": false,
+      "reason": "诸葛亮专属：借东风；未声明武将 tag"
+    },
+    {
+      "type": "JinCuiXingTai",
+      "title": "尽瘁形态",
+      "tags": [],
+      "source": "mod/src/Cards/JinCuiXingTai.cs",
+      "inOriginalPoolList": true,
+      "reason": "武诸葛亮专属：尽瘁形态；未声明武将 tag"
+    },
+    {
+      "type": "Jiu",
+      "title": "酒",
+      "tags": [],
+      "source": "mod/src/Cards/Jiu.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "JueDou",
+      "title": "决斗",
+      "tags": [],
+      "source": "mod/src/Cards/JueDou.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "JueYing",
+      "title": "绝影",
+      "tags": [],
+      "source": "mod/src/Cards/JueYing.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "LeBuSiShu",
+      "title": "乐不思蜀",
+      "tags": [],
+      "source": "mod/src/Cards/LeBuSiShu.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "LeZhuGeGuoChengYan",
+      "title": "乐诸葛果-乘烟",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/LeZhuGeGuoChengYan.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "LiuBaLiuZhuan",
+      "title": "刘巴-流转",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/LiuBaLiuZhuan.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "LiuBaZhuBi",
+      "title": "刘巴-铸币",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/LiuBaZhuBi.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "LiuBeiJiJiang",
+      "title": "刘备-激将",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/LiuBeiJiJiang.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "MouFaZhengXiXing",
+      "title": "谋法正-悉性",
+      "tags": [],
+      "source": "mod/src/Cards/MouFaZhengXiXing.cs",
+      "inOriginalPoolList": false,
+      "reason": "谋法正专属悉性，漏标武将／蜀 tag"
+    },
+    {
+      "type": "MouGuanPingWuWei",
+      "title": "谋关平-武威",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/MouGuanPingWuWei.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "MouGuanYuJuAo",
+      "title": "谋关羽-倨傲",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/MouGuanYuJuAo.cs",
+      "inOriginalPoolList": false,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "MouJiangWeiJueMouYang",
+      "title": "谋姜维-绝谋-阳",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/MouJiangWeiJueMouYang.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "MouJiangWeiJueMouYin",
+      "title": "谋姜维-绝谋-阴",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/MouJiangWeiJueMouYin.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "MouPangTongHongCe",
+      "title": "谋庞统-宏策",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/MouPangTongHongCe.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "HongCeShangCe",
+      "title": "宏策-上策",
+      "tags": [],
+      "source": "mod/src/Cards/MouPangTongHongCe.cs",
+      "inOriginalPoolList": false,
+      "reason": "被排除角色专属的选择 token"
+    },
+    {
+      "type": "HongCeZhongCe",
+      "title": "宏策-中策",
+      "tags": [],
+      "source": "mod/src/Cards/MouPangTongHongCe.cs",
+      "inOriginalPoolList": false,
+      "reason": "被排除角色专属的选择 token"
+    },
+    {
+      "type": "HongCeXiaCe",
+      "title": "宏策-下策",
+      "tags": [],
+      "source": "mod/src/Cards/MouPangTongHongCe.cs",
+      "inOriginalPoolList": false,
+      "reason": "被排除角色专属的选择 token"
+    },
+    {
+      "type": "MouPangTongYinMouYang",
+      "title": "谋庞统-寅谋-阳",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/MouPangTongYinMouYang.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "MouPangTongYinMouYin",
+      "title": "谋庞统-寅谋-阴",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/MouPangTongYinMouYin.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "MouWuYiBiBu",
+      "title": "谋吴懿-庇部",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/MouWuYiBiBu.cs",
+      "inOriginalPoolList": false,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "NanManRuQin",
+      "title": "南蛮入侵",
+      "tags": [],
+      "source": "mod/src/Cards/NanManRuQin.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "PangFengYiPeiNiang",
+      "title": "庞凤衣-醅酿",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/PangFengYiPeiNiang.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "PangFengYiYiTong",
+      "title": "庞凤衣-异瞳",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/PangFengYiYiTong.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "PangHongGangJian",
+      "title": "庞宏-刚简",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/PangHongGangJian.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "PangHongPingZhiYang",
+      "title": "庞宏-评骘-阳",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/PangHongPingZhiYang.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "PangHongPingZhiYin",
+      "title": "庞宏-评骘-阴",
+      "tags": [],
+      "source": "mod/src/Cards/PangHongPingZhiYin.cs",
+      "inOriginalPoolList": true,
+      "reason": "蜀武将庞宏转换阴 token"
+    },
+    {
+      "type": "QingBeiAttack",
+      "title": "攻击牌",
+      "tags": [],
+      "source": "mod/src/Cards/QingBeiOptions.cs",
+      "inOriginalPoolList": false,
+      "reason": "被排除角色专属的选择 token"
+    },
+    {
+      "type": "QingBeiSkill",
+      "title": "技能牌",
+      "tags": [],
+      "source": "mod/src/Cards/QingBeiOptions.cs",
+      "inOriginalPoolList": false,
+      "reason": "被排除角色专属的选择 token"
+    },
+    {
+      "type": "QingBeiPowerOption",
+      "title": "能力牌",
+      "tags": [],
+      "source": "mod/src/Cards/QingBeiOptions.cs",
+      "inOriginalPoolList": false,
+      "reason": "被排除角色专属的选择 token"
+    },
+    {
+      "type": "QingBeiSkip",
+      "title": "QingBeiSkip",
+      "tags": [],
+      "source": "mod/src/Cards/QingBeiOptions.cs",
+      "inOriginalPoolList": false,
+      "reason": "被排除角色专属的选择 token"
+    },
+    {
+      "type": "QingGangJian",
+      "title": "青钢剑",
+      "tags": [],
+      "source": "mod/src/Cards/QingGangJian.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "QingLongYanYueDao",
+      "title": "青龙偃月刀",
+      "tags": [],
+      "source": "mod/src/Cards/QingLongYanYueDao.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "RenWangDun",
+      "title": "仁王盾",
+      "tags": [],
+      "source": "mod/src/Cards/RenWangDun.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "Sha",
+      "title": "杀",
+      "tags": [],
+      "source": "mod/src/Cards/Sha.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "Shan",
+      "title": "闪",
+      "tags": [],
+      "source": "mod/src/Cards/Shan.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "ShangYu",
+      "title": "许靖-赏誉",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/ShangYu.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "ShenHuangZhongLieCang",
+      "title": "神黄忠-裂穹",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "source": "mod/src/Cards/ShenHuangZhongLieCang.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "LieCangOption1",
+      "title": "力烽",
+      "tags": [],
+      "source": "mod/src/Cards/ShenHuangZhongLieCang.cs",
+      "inOriginalPoolList": false,
+      "reason": "复制"
+    },
+    {
+      "type": "LieCangOption2",
+      "title": "地机",
+      "tags": [],
+      "source": "mod/src/Cards/ShenHuangZhongLieCang.cs",
+      "inOriginalPoolList": false,
+      "reason": "复制"
+    },
+    {
+      "type": "LieCangOption3",
+      "title": "中枢",
+      "tags": [],
+      "source": "mod/src/Cards/ShenHuangZhongLieCang.cs",
+      "inOriginalPoolList": false,
+      "reason": "复制"
+    },
+    {
+      "type": "LieCangOption4",
+      "title": "气海",
+      "tags": [],
+      "source": "mod/src/Cards/ShenHuangZhongLieCang.cs",
+      "inOriginalPoolList": false,
+      "reason": "复制"
+    },
+    {
+      "type": "LieCangOption5",
+      "title": "天冲",
+      "tags": [],
+      "source": "mod/src/Cards/ShenHuangZhongLieCang.cs",
+      "inOriginalPoolList": false,
+      "reason": "复制"
+    },
+    {
+      "type": "ShenHuangZhongZhanJue",
+      "title": "神黄忠-斩决",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "source": "mod/src/Cards/ShenHuangZhongZhanJue.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "ZhanJueOption1",
+      "title": "斩决-强命",
+      "tags": [],
+      "source": "mod/src/Cards/ShenHuangZhongZhanJue.cs",
+      "inOriginalPoolList": false,
+      "reason": "复制"
+    },
+    {
+      "type": "ZhanJueOption2",
+      "title": "斩决-吸血",
+      "tags": [],
+      "source": "mod/src/Cards/ShenHuangZhongZhanJue.cs",
+      "inOriginalPoolList": false,
+      "reason": "复制"
+    },
+    {
+      "type": "ShenJiangWeiPingXiang",
+      "title": "神姜维-平襄",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "source": "mod/src/Cards/ShenJiangWeiPingXiang.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "ShenJiangWeiTianRen",
+      "title": "神姜维-天任",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "source": "mod/src/Cards/ShenJiangWeiTianRen.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "ShenMaChaoShouLi",
+      "title": "神马超-狩骊",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "source": "mod/src/Cards/ShenMaChaoShouLi.cs",
+      "inOriginalPoolList": false,
+      "reason": "复制"
+    },
+    {
+      "type": "ShenPangTongFengLiaoYang",
+      "title": "神庞统-凤燎-阳",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "source": "mod/src/Cards/ShenPangTongFengLiaoYang.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "ShenPangTongFengLiaoYin",
+      "title": "神庞统-凤燎-阴",
+      "tags": [],
+      "source": "mod/src/Cards/ShenPangTongFengLiaoYin.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "ShenZhangFeiShenCai",
+      "title": "神张飞-神裁",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "source": "mod/src/Cards/ShenZhangFeiShenCai.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "ShenZhangFeiXunShi",
+      "title": "神张飞-巡使",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "source": "mod/src/Cards/ShenZhangFeiXunShi.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "ShenZhaoYunLongHun",
+      "title": "神赵云-龙魂",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "source": "mod/src/Cards/ShenZhaoYunLongHun.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "ShenZhugeliangDaWu",
+      "title": "神诸葛亮-大雾",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "source": "mod/src/Cards/ShenZhugeliangDaWu.cs",
+      "inOriginalPoolList": false,
+      "reason": "复制"
+    },
+    {
+      "type": "ShenZhugeliangKuangFeng",
+      "title": "神诸葛亮-狂风",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "source": "mod/src/Cards/ShenZhugeliangKuangFeng.cs",
+      "inOriginalPoolList": false,
+      "reason": "复制"
+    },
+    {
+      "type": "ShenZhugeliangQiXing",
+      "title": "神诸葛亮-七星",
+      "tags": [
+        "WuJiang",
+        "ShenJiang"
+      ],
+      "source": "mod/src/Cards/ShenZhugeliangQiXing.cs",
+      "inOriginalPoolList": false,
+      "reason": "复制"
+    },
+    {
+      "type": "SlotOptionWeapon",
+      "title": "废除武器栏",
+      "tags": [],
+      "source": "mod/src/Cards/SlotOptionCards.cs",
+      "inOriginalPoolList": false,
+      "reason": "被排除角色专属的选择 token"
+    },
+    {
+      "type": "SlotOptionArmor",
+      "title": "废除防具栏",
+      "tags": [],
+      "source": "mod/src/Cards/SlotOptionCards.cs",
+      "inOriginalPoolList": false,
+      "reason": "被排除角色专属的选择 token"
+    },
+    {
+      "type": "SlotOptionDefensiveHorse",
+      "title": "废除防御马栏",
+      "tags": [],
+      "source": "mod/src/Cards/SlotOptionCards.cs",
+      "inOriginalPoolList": false,
+      "reason": "被排除角色专属的选择 token"
+    },
+    {
+      "type": "SlotOptionOffensiveHorse",
+      "title": "废除进攻马栏",
+      "tags": [],
+      "source": "mod/src/Cards/SlotOptionCards.cs",
+      "inOriginalPoolList": false,
+      "reason": "被排除角色专属的选择 token"
+    },
+    {
+      "type": "SlotOptionTreasure",
+      "title": "废除宝物栏",
+      "tags": [],
+      "source": "mod/src/Cards/SlotOptionCards.cs",
+      "inOriginalPoolList": false,
+      "reason": "被排除角色专属的选择 token"
+    },
+    {
+      "type": "Tao",
+      "title": "桃",
+      "tags": [],
+      "source": "mod/src/Cards/Tao.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "TieSuoLianHuan",
+      "title": "铁索连环",
+      "tags": [],
+      "source": "mod/src/Cards/TieSuoLianHuan.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "TunChu",
+      "title": "囤储",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/TunChu.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "WanJianQiFa",
+      "title": "万箭齐发",
+      "tags": [],
+      "source": "mod/src/Cards/WanJianQiFa.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "WeiLiuBeiLieXiang",
+      "title": "威刘备-烈骧",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/WeiLiuBeiLieXiang.cs",
+      "inOriginalPoolList": false,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "WeiLiuBeiRenGou",
+      "title": "威刘备-仁彀",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/WeiLiuBeiRenGou.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "WeiZhangXingCaiHuangNu",
+      "title": "威张星彩-煌怒",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/WeiZhangXingCaiHuangNu.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "WeiZhangXingCaiXianKuang",
+      "title": "威张星彩-贤贶",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/WeiZhangXingCaiXianKuang.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "WoLongZhuGeBaZhen",
+      "title": "卧龙诸葛-八阵",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/WoLongZhuGeBaZhen.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "WoLongZhuGeLiangHuoJi",
+      "title": "卧龙诸葛-火计",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/WoLongZhuGeLiangHuoJi.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "WoLongZhuGeLiangKanPo",
+      "title": "卧龙诸葛-看破",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/WoLongZhuGeLiangKanPo.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "WuBanYouZhan",
+      "title": "吴班-诱战",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/WuBanYouZhan.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "WuGuanYuWuYou",
+      "title": "武关羽-武佑",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/WuGuanYuWuYou.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "WuSeSha",
+      "title": "无色杀",
+      "tags": [],
+      "source": "mod/src/Cards/WuSeSha.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "WuZhongShengYou",
+      "title": "无中生有",
+      "tags": [],
+      "source": "mod/src/Cards/WuZhongShengYou.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "XingFaZhengZhiJi",
+      "title": "星法正-知机",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/XingFaZhengZhiJi.cs",
+      "inOriginalPoolList": false,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "XingXiaHouBaJueFa",
+      "title": "星夏侯霸-绝伐",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/XingXiaHouBaJueFa.cs",
+      "inOriginalPoolList": false,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "XingXiaHouBaWeiGu",
+      "title": "星夏侯霸-维谷",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/XingXiaHouBaWeiGu.cs",
+      "inOriginalPoolList": false,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "YiZhenQingMeng",
+      "title": "一枕清梦",
+      "tags": [],
+      "source": "mod/src/Cards/YiZhenQingMeng.cs",
+      "inOriginalPoolList": true,
+      "reason": "角色技能语音及星资源联动，未证明是通用锦囊，先列角色专属待定"
+    },
+    {
+      "type": "ZhangBaSheMao",
+      "title": "丈八蛇矛",
+      "tags": [],
+      "source": "mod/src/Cards/ZhangBaSheMao.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "ZhangYiMuRui",
+      "title": "张翼-暮锐",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/ZhangYiMuRui.cs",
+      "inOriginalPoolList": false,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "ZhiZhe",
+      "title": "智哲",
+      "tags": [],
+      "source": "mod/src/Cards/ZhiZhe.cs",
+      "inOriginalPoolList": true,
+      "reason": "武诸葛亮起始专属：智哲，非通用基础牌"
+    },
+    {
+      "type": "ZhuGeLianNu",
+      "title": "诸葛连弩",
+      "tags": [],
+      "source": "mod/src/Cards/ZhuGeLianNu.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "ZhuQueYuShan",
+      "title": "朱雀羽扇",
+      "tags": [],
+      "source": "mod/src/Cards/ZhuQueYuShan.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    },
+    {
+      "type": "ZhugeJunGengDu",
+      "title": "诸葛均-耕读",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/ZhugeJunGengDu.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "ZhugeJunGuMai",
+      "title": "诸葛均-孤脉",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/ZhugeJunGuMai.cs",
+      "inOriginalPoolList": true,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "ZhugeliangGuanXing",
+      "title": "诸葛亮-观星",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/ZhugeliangGuanXing.cs",
+      "inOriginalPoolList": false,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "ZhugeliangKongCheng",
+      "title": "诸葛亮-空城",
+      "tags": [
+        "WuJiang",
+        "Shu"
+      ],
+      "source": "mod/src/Cards/ZhugeliangKongCheng.cs",
+      "inOriginalPoolList": false,
+      "reason": "排除魏蜀吴 tag 武将"
+    },
+    {
+      "type": "ZiXing",
+      "title": "紫骍",
+      "tags": [],
+      "source": "mod/src/Cards/ZiXing.cs",
+      "inOriginalPoolList": true,
+      "reason": "复制"
+    }
+  ],
+  "externalReferences": [
+    {
+      "file": "mod/src/Powers/ShenCaiJudgmentPower.cs",
+      "line": 72,
+      "types": [
+        "ShenZhangFeiShenCai"
+      ],
+      "code": "foreach (var shenCai in pile.Cards.OfType<ShenZhangFeiShenCai>())"
+    },
+    {
+      "file": "mod/src/Patches/LeBuSiShuHoverTipsPatch.cs",
+      "line": 14,
+      "types": [
+        "LeBuSiShu"
+      ],
+      "code": "if (__instance.GetType().Assembly != typeof(LeBuSiShu).Assembly) return;"
+    },
+    {
+      "file": "mod/src/Patches/LeBuSiShuHoverTipsPatch.cs",
+      "line": 15,
+      "types": [
+        "LeBuSiShu"
+      ],
+      "code": "if (__instance is not LeBuSiShu &&"
+    },
+    {
+      "file": "mod/src/Relics/NewSharedRelics.cs",
+      "line": 255,
+      "types": [
+        "Sha"
+      ],
+      "code": "if (cardSource is not Sha || !IsOwnersPoweredAttack(props, dealer, cardSource))"
+    },
+    {
+      "file": "mod/src/Orbs/ZhangBaSheMaoOrb.cs",
+      "line": 90,
+      "types": [
+        "WuSeSha"
+      ],
+      "code": "var sha = Owner.Creature.CombatState.CreateCard<WuSeSha>(Owner);"
+    }
+  ],
+  "inputHashes": {
+    "mod/Yjcm/localization/zhs/cards.json": "171b9b63912a07b1e669611d3938132f4a5fa04d3005476116afad60de56f61c",
+    "mod/Yjcm/localization/zhs/orbs.json": "d8beecb63d720051e7e1fff6654b85a966b313f26c2aa35ee7733846807eb71a",
+    "mod/src/CardPools/WuZhugeliangCardPool.cs": "5f3ee30f3798441ec9b7ce840db23ec578b27f03f828926b65af88e9ff31b826",
+    "mod/src/Cards/BaGuaZhen.cs": "23522be4dba44ede5e2866b64d5b59de6bdf9c73fad0a07af70424a27c4461a3",
+    "mod/src/Cards/BaiYinShiZi.cs": "e5bf00e118c18c088626eefe64ad68925a5149886d9719acaea94222fa8132da",
+    "mod/src/Cards/BeiFa.cs": "1a323b40dfc750d713b03308e4e60206efd2c3dbe8bd094e39c35eea1ab4acf4",
+    "mod/src/Cards/BeiZhiCard.cs": "340c757ac93c2c54c7fee900a7f661cfd7bf9b34f55163029eb06fd1cc9cc1f9",
+    "mod/src/Cards/CaiXia.cs": "c9d77d9a0f4ab6bb5b3660ac2881adac83b650b61e5baf55fff53e1ae4a3c016",
+    "mod/src/Cards/CardSelectionHelper.cs": "73aec75afa5d8f95f018ae44da4e58616bbf7224d76e2dc1aa13d86ba5421485",
+    "mod/src/Cards/ChenShiQingBei.cs": "9dd21b977f6268a7f02bde47b12a33d6a7240bb9fda3bce8421d008183f35c8e",
+    "mod/src/Cards/ChiTu.cs": "53604255dc4153b641e73e9a6b1842630442127ddcff2b61ac52f87972d786ca",
+    "mod/src/Cards/CiXiongShuangGuJian.cs": "946eeace149d203fbc00483b6c41ac011501dc8e9243e7b79c3bbb55d477f2db",
+    "mod/src/Cards/DiLu.cs": "3a5d1f0596d0b6263c64c8c37dffbac98f12dc35af127b2b28ab5bcb286f1e7f",
+    "mod/src/Cards/EventAncientCards.cs": "05b386ffb326be42455900a25923ae5988339b2243bf3130b9cbf021a765e061",
+    "mod/src/Cards/GuanPingLongYin.cs": "0b1fcb0089d65e894a2cbb8838b3fb48ab89371d5a59458db23f078e8c83253d",
+    "mod/src/Cards/GuanShiFu.cs": "af13f0b4fb9f700b43ef44a8aff74482ee3644bfa9a462f910b4fb1ebbf29dfb",
+    "mod/src/Cards/HanBingJian.cs": "01e7cad7cb27d191e872e95d0be21b20bad9021d551b82309cfbd8644813c152",
+    "mod/src/Cards/HuangWudieShaXue.cs": "603d89c25048e525c21a6004b25d52160681cfc7cd1e4da577ddfe3297a065c7",
+    "mod/src/Cards/HuangWudieShouXing.cs": "152fed62f8067e9afb1cca4f5feb73ad86001bab73ef18304300c283384478b7",
+    "mod/src/Cards/HuangWudieShuangRui.cs": "ee4fe257817d4f96c8e54b86caddadfc7a72088dcdf409ba78a072a4b957e782",
+    "mod/src/Cards/HuoGong.cs": "25e6ce1901e82762c11aab3ece1b6713bb5be690920d6ac53bddc6ed06d2faa1",
+    "mod/src/Cards/JieDongFeng.cs": "c60973ec951af48394164d78f86e0b111493b3fb7423f9531ef62af2752377ed",
+    "mod/src/Cards/JinCuiXingTai.cs": "63726dd571fc5bc53ac1cdd9e00ca0c40494576c35eb58757c7819b7574aaa1e",
+    "mod/src/Cards/Jiu.cs": "2dbe7d452ec4eb48312ecb8d47ae711f55c4cd13e9aee2f029a7bcf1c5a20841",
+    "mod/src/Cards/JueDou.cs": "9e0673a656749b2d00948cd6471bfd94d3e1a74805fe9ad7cf74fc0970e1e63a",
+    "mod/src/Cards/JueYing.cs": "3b22947b0206b264480cfa1d7557b5142fee0315af1c443b672ad9b2ded44852",
+    "mod/src/Cards/LeBuSiShu.cs": "4407dbc280a3a5af94810c6dc225301db82f3ba0a3ea6be5b24a8614de1f5138",
+    "mod/src/Cards/LeZhuGeGuoChengYan.cs": "533734bc1e49639a7627f6bfed67879e0cd04a386d54bff6c22e3446dcfff1da",
+    "mod/src/Cards/LiuBaLiuZhuan.cs": "b9f69cf16ef32d8c38ba5635964bf1b17f22ae24cfb6f0c31885f25291a49fbf",
+    "mod/src/Cards/LiuBaZhuBi.cs": "f1be6f724964c7d05378a2bc2505c7306aea7be57f9977a3915ba92a3406da79",
+    "mod/src/Cards/LiuBeiJiJiang.cs": "f8a2b45e5f3ced80c80f1b40b1fb58fdc3ecc531b4b2769f91b3e41aeebe3c01",
+    "mod/src/Cards/MouFaZhengXiXing.cs": "7b41ce42532b3cc325295a5e2a3b06d3f5f95fa4be7043d8a05658180cbf4924",
+    "mod/src/Cards/MouGuanPingWuWei.cs": "f5a8f7a8e2ccb4977988138c61156d762286896d6751b6d75e18373d4f2262f6",
+    "mod/src/Cards/MouGuanYuJuAo.cs": "f7c099faea16d671b331e3251ab2e255898dbf7bbfa7656c8f84ffb1c9b9b212",
+    "mod/src/Cards/MouJiangWeiJueMouYang.cs": "308e4b5050e5a090213b8cc7babddf9be0ea7deb5bf25a56755b1efc84693538",
+    "mod/src/Cards/MouJiangWeiJueMouYin.cs": "4c43f48c3aec360755cd57d3f503e1fe3e22ed55a0e528adf3d777021f284530",
+    "mod/src/Cards/MouPangTongHongCe.cs": "45e75e6383137b87456488fbfd96350e52f32588ba4d88370d81007e06e62c49",
+    "mod/src/Cards/MouPangTongYinMouYang.cs": "50e7fa2f5fdb05581827b0485b24b2e9ac0c0c07d405656ac6b76aa8799a67f3",
+    "mod/src/Cards/MouPangTongYinMouYin.cs": "c1b76e93c0c77be61659e3ea149cf792dfb32c9197c6294a022893108deb1d14",
+    "mod/src/Cards/MouWuYiBiBu.cs": "e43b464cf9da4f262a33fce83c52087bb1fb9899bde8a823b561fe4b592eadf0",
+    "mod/src/Cards/NanManRuQin.cs": "107efe820efd20cbb051d20ab49e9d107e196b8636f7ecba40f9222d3f7cac0a",
+    "mod/src/Cards/PangFengYiPeiNiang.cs": "77eb47386d64334ae8dbe9e3a2882c052f4b7c367836fb4c330b18e729ccc3eb",
+    "mod/src/Cards/PangFengYiYiTong.cs": "f0589c588f5a64536cb7df161086845ead668d1dbeefc77bc134e5094576997c",
+    "mod/src/Cards/PangHongGangJian.cs": "45e1138acbf62c883a59f0dcd646de6cdb716adcf770846069d41e8e0305351e",
+    "mod/src/Cards/PangHongPingZhiYang.cs": "6aa04f65fa4e2ea63de078cdb5ab001a12c401ab99464cb9c538421dff75e0e9",
+    "mod/src/Cards/PangHongPingZhiYin.cs": "ded0fe829fccfb503dd20237e501199653be5110fbbbd9d801004ee4deb4a0c5",
+    "mod/src/Cards/QingBeiOptions.cs": "dec735a6be14601fb0777302c3869d26ab550d17ce039dd23f819dfd47b68a22",
+    "mod/src/Cards/QingGangJian.cs": "95b0813e89631d2692dd015a9302e6f49ad8d5ed2899d459c7c30315d7269a3b",
+    "mod/src/Cards/QingLongYanYueDao.cs": "9fdefc3fb272f7287e429a367ccadd67762a09b9aace7d6b0ad60b5b23d7e3f5",
+    "mod/src/Cards/RenWangDun.cs": "ed46de6adbf8f682b885a0421d3b9841714d026b432fac790250156518f50b97",
+    "mod/src/Cards/Sha.cs": "772e11a6fe3f0f5b2a8c134af50430b9d60d046f8fddd25c17c0f7a5766439dc",
+    "mod/src/Cards/Shan.cs": "10327b1f06e51aa72af39dcaa2d508c704b5600d74259183e11b2deeef2635ca",
+    "mod/src/Cards/ShangYu.cs": "1fe085a822ba1ea2cce54142d3b43e4a5b6cf1a68dcd308dd388575e7e527edf",
+    "mod/src/Cards/ShenHuangZhongLieCang.cs": "a149e548bbc9a01af5e6f6ac181882cc3cb5a76eb3d5ab71b01c9e68e21f759f",
+    "mod/src/Cards/ShenHuangZhongZhanJue.cs": "b1bd2f45b7521122a76930927dc8ae42eeb9c5714877b51203f7addd5eae50b8",
+    "mod/src/Cards/ShenJiangWeiPingXiang.cs": "547d8c1f731afe64a162ab2c6d70430d2c749fa54fce0f14c0ce3de57f4edd31",
+    "mod/src/Cards/ShenJiangWeiTianRen.cs": "93306df309fb393c01a484945816b49699154bad699eb2f24ce10cb1c0ba78bf",
+    "mod/src/Cards/ShenMaChaoShouLi.cs": "f1815626f5b417e9b3efe1e4fdb3b9b078225ffa0b9722a24b9b832f4f01f4b3",
+    "mod/src/Cards/ShenPangTongFengLiaoYang.cs": "3c30dfbadd7008dfbd038fe8eb3601f026ec854ca6aee5a767dde8729184c14c",
+    "mod/src/Cards/ShenPangTongFengLiaoYin.cs": "1c6bedb236a4ef39f7481ece50757684b6c63d2d9894fa584f18ca84fa799a4e",
+    "mod/src/Cards/ShenZhangFeiShenCai.cs": "6aef807ee91a915ceff1ebf5ad5fef715628f8c0d1a1e95ad4a20291b4830ef9",
+    "mod/src/Cards/ShenZhangFeiXunShi.cs": "0f94e37d7eefbb631cc78cc37771146ae74aaba11181b39c0f89adfde19a0417",
+    "mod/src/Cards/ShenZhaoYunLongHun.cs": "e4a6156c802cc6e9791fc83bd1c7f70c4b8515f5284004ef9549c92d2a6f2858",
+    "mod/src/Cards/ShenZhugeliangDaWu.cs": "f7e8ada833ce81612cbbd8805c06d91c301b17f349069164f4f88d83b3e609cf",
+    "mod/src/Cards/ShenZhugeliangKuangFeng.cs": "a0796e8459e45649780bcd85d2bbdf19cc5e533450bf8b1f6bedf14f1357d6b1",
+    "mod/src/Cards/ShenZhugeliangQiXing.cs": "e33bf256c6210b05e4331afce7567a8975ed0a10a20c5ca50f1b8b7f3f33b4b7",
+    "mod/src/Cards/SlotOptionCards.cs": "819995bc7bc37d569d05cf7c619fd32f0b1f2a3a472bc42e1de9c7c5c8db9880",
+    "mod/src/Cards/Tao.cs": "78fc9c283f9c7692d79b3dea1859a3c26f2dbcb5b564ccba891aa535de376461",
+    "mod/src/Cards/TieSuoLianHuan.cs": "601eeb782f760b7c2ad616a6c7e14aa0f2acc22dacb2ec2171b1fd10ac416005",
+    "mod/src/Cards/TunChu.cs": "31fc7fc872b46546281242bc12a2151d8b0175b65bc3fe1541e672c5d4cb9e20",
+    "mod/src/Cards/WanJianQiFa.cs": "c486a7d8a600f5c0f7360de6804c4e0e061f67a35bcf7520957cfe30e234d378",
+    "mod/src/Cards/WeiDongZhuoCard.cs": "44781a5fe392076b967a2218bd768a42065ec670b566a985e6c45520af548c19",
+    "mod/src/Cards/WeiDongZhuoCloneMap.cs": "3859c2a975402bf72258fa598dfdea1d3d8832328bc47165d5f4dd5259d8181f",
+    "mod/src/Cards/WeiLiuBeiLieXiang.cs": "0298e14cef8a0a113c8041133cd9da8f27e3a71aae73f5a911cbbfee07b20736",
+    "mod/src/Cards/WeiLiuBeiRenGou.cs": "01068c272de6853e9b710988eea296a5087cd5a63fdcfcc0d2022563dd43e0c0",
+    "mod/src/Cards/WeiZhangXingCaiHuangNu.cs": "3f302faf623925d86a047dad74a26ad3e1e8a9989687975cfb450888eca36b31",
+    "mod/src/Cards/WeiZhangXingCaiXianKuang.cs": "4ec8e12151c473c2dcbea9f7548578af0a90517ee74d674393968bf9211f2454",
+    "mod/src/Cards/WoLongZhuGeBaZhen.cs": "026e9fc526d89c66590d40b4d744e83c4f8ebf5edaac74fbb07680ad7925a395",
+    "mod/src/Cards/WoLongZhuGeLiangHuoJi.cs": "3541447dacc1ddc004067e1979ac1c8094a37bea182daa11423f97ffd2a9f8b1",
+    "mod/src/Cards/WoLongZhuGeLiangKanPo.cs": "44a0e478187fba2603214648cbff066a0eb04b8c44493a37559fd2b826d9bf87",
+    "mod/src/Cards/WuBanYouZhan.cs": "085c77366e1b0ef29334d7bd5726c43926fb3f029fb57096eeda420ca5242547",
+    "mod/src/Cards/WuGuanYuWuYou.cs": "026a108e205715e2dbb458016e76b43e3591a8a0701ad7e2fd761c003ec0c6d4",
+    "mod/src/Cards/WuSeSha.cs": "1500696bb57e5035b5375c863fa5d97de7e4e05edf27d5ba40c51ffde5dfcacc",
+    "mod/src/Cards/WuZhongShengYou.cs": "2dd749509f34f6595230b08a40cf895873f128bae12915b972c33b48632282d0",
+    "mod/src/Cards/XingFaZhengZhiJi.cs": "a0a4cada9abf44038bcccb762ba32df732247a95c05c3bc7c7f53def4ae8f0a0",
+    "mod/src/Cards/XingXiaHouBaJueFa.cs": "b1209d1943c944e81592d42c491348f9a7977f51d8fd878e9b54d6007e5f581e",
+    "mod/src/Cards/XingXiaHouBaWeiGu.cs": "bfa72eb00df8b1c8afc5b01399251edbbafe624cd18a03983ee5b5e66cb64950",
+    "mod/src/Cards/YiZhenQingMeng.cs": "d37e0e19a7c8f0fff607d1a02775ee1520b63162749330c0d66c2bdf946d16b8",
+    "mod/src/Cards/YjcmAccact.cs": "b93369b4d1f451855a268112074b54b97899eb879b2711c7db7d9a9239197008",
+    "mod/src/Cards/YjcmCard.cs": "b7bf150f8fac175f572cb625c65f3732c5b2ea336900b349bdfd93873cb13d50",
+    "mod/src/Cards/ZhangBaSheMao.cs": "d94aeeae79cdde11fbf161e61cc31bbe292258930f151656edca77e4fcc19e4a",
+    "mod/src/Cards/ZhangYiMuRui.cs": "75164d5a5ebebdf369ccb3f773982613da9a23ab5c5aa6e97e71ee7d3ef530d5",
+    "mod/src/Cards/ZhiZhe.cs": "e17acbd1e5cef4f4501bb040f0f28b317a9ca826b326b7ddd601ae962b158399",
+    "mod/src/Cards/ZhuGeLianNu.cs": "e4ad40268a860b1520536b121cef8a4118c80ca277a121a66568f19239d230e9",
+    "mod/src/Cards/ZhuQueYuShan.cs": "deffd04867d356d8ebd40c4314ff5b91efb4f203e3d534265ce2f9bf46bcda5d",
+    "mod/src/Cards/ZhugeJunGengDu.cs": "62d073b12a7d7087d40a9f608f8c5d549502dcbbd62412014df3d477d0a9b90c",
+    "mod/src/Cards/ZhugeJunGuMai.cs": "ec6f85ee322dd591191e3eeeff2d90f9007638d8f23080445ef7655e8724dee7",
+    "mod/src/Cards/ZhugeliangGuanXing.cs": "465ea76da8560d784b04798a520db2dea85791cda52da7a0efe003a112303995",
+    "mod/src/Cards/ZhugeliangKongCheng.cs": "7f197c20a18a4f9750fd0fa785ba9788a2757b4556dc803d462a4fbd80a11f28",
+    "mod/src/Cards/ZiXing.cs": "11b323ffc47b714361beff10767ca545145cbb8d8bb77967fdad8b875d345f1a",
+    "mod/src/Equipment/EquipCmd.cs": "3a90c6aaa330e9a80c3685d42633394348e3065592fe8693fae9ceb8baa5053b",
+    "mod/src/Equipment/EquipmentOrbModel.cs": "32825580629dfb12a97f12ef94f86967a66bcbd1b4d43b9448e02920b3d57662",
+    "mod/src/Equipment/EquipmentOrbSprite.cs": "4ebcf95cad0f456386e146299e783ecc769702e5ec865546a5103077bca36b8f",
+    "mod/src/Equipment/EquipmentSlotType.cs": "95f6ee605845335793804299f3567249d597b030bdf33629621bb161306aade2",
+    "mod/src/Equipment/OrbChannelRoutingPatch.cs": "7c5922b8cd86f70f4554990b59e2c171101c06daa518bdb697ad3a934b9b4b35",
+    "mod/src/Equipment/OrbSlotProtectionPatch.cs": "9c8ffab56ddc511d2de1f03731b95056afcb16db843ea2b0725fbc94096d9a2d",
+    "mod/src/Extensions/StringExtensions.cs": "9843d32cda7685f96e5a28585cf309bf89bc18c5a36979d21a779d4ef42a3ef8",
+    "mod/src/Orbs/AbolishSlotOrb.cs": "af608e06a33294d90d09ab5b35359254e9a1c8791537748bac4469124f5e6da7",
+    "mod/src/Orbs/BaGuaZhenOrb.cs": "724c79ef52921878436ce8ab846379bdfe4020c7b3d9a3307e543c5b766dfa97",
+    "mod/src/Orbs/BaiYinShiZiOrb.cs": "e49270d27bd5a767f9d12d1cfe3bfcd4251f5d4266e342f067929f2cc6f5322a",
+    "mod/src/Orbs/ChiTuOrb.cs": "1f795454c561cdca6a71758de8c06921f9f7d4f6e4537f0c4e7ac13ee7f28627",
+    "mod/src/Orbs/CiXiongShuangGuJianOrb.cs": "e65353626ccde52b0b17396f3061e97c96a1e71030c9a9d36cdbd9473a74a5dd",
+    "mod/src/Orbs/DefensiveHorseOrb.cs": "0bf949fe12634a90932ad4ff0afb94f049e9b1af29a42262ded9c1be0e6fbb8c",
+    "mod/src/Orbs/DiLuOrb.cs": "8f43f414ea38e33c32c681e4eefe257da60edeec615be1016e4b3cbb321b8e39",
+    "mod/src/Orbs/EmptyArmorSlotOrb.cs": "152e07b9d5fbe4de80a6b62b33760fd3e35c89a305fec895fccd79cbbb5a8d20",
+    "mod/src/Orbs/EmptyDefensiveHorseSlotOrb.cs": "91d2d12e4d72e8c638b9f0d8f78bc30fbe07e8530cb5923545b3abddde7d0ab3",
+    "mod/src/Orbs/EmptyOffensiveHorseSlotOrb.cs": "1466a01dbc7b410765d512107b35c1ce3b18bab3c74b890f08943e0327a2bea3",
+    "mod/src/Orbs/EmptyTreasureSlotOrb.cs": "7f9c72c6e379394f64a8fce4202eb87d536354f5cfbaae1513e8bc103e14d222",
+    "mod/src/Orbs/EmptyWeaponSlotOrb.cs": "2741b5e9865356ce7593c331d6febec7d9192b9ccd922d7a87240ec0d8ff7c36",
+    "mod/src/Orbs/GuanShiFuOrb.cs": "2b9b3ebfedefa486a19020c3e12486db164c4be5f1a256f6b196291676e2bc6c",
+    "mod/src/Orbs/HanBingJianOrb.cs": "354ba13ea0aab69933e170214c84fdb7d6a3e16b3f33ff6352b79a489987ca51",
+    "mod/src/Orbs/JueYingOrb.cs": "f69d2c61e33f53f1bb25b5599881e0799ae6e261f4c7b12ccbaa4dc1eaac9629",
+    "mod/src/Orbs/OffensiveHorseOrb.cs": "ff5e6c075ca0500ad81e4dc5df6dde0cc71770ac868d3475a7b713f8f2726e9c",
+    "mod/src/Orbs/QingGangJianOrb.cs": "96a2bed821daf23c48c08f914305674ae8a3dc0724842b83bd4f76a65307e97f",
+    "mod/src/Orbs/QingLongYanYueDaoOrb.cs": "9e60ce37b2611eeac652d0933bfebb6e091cf79c7bf18ded31a3311f2115c225",
+    "mod/src/Orbs/RenWangDunOrb.cs": "8874e1e926b00e7b0302b2bc7dc0f3557932e8e708a00fc9a0a099d310621984",
+    "mod/src/Orbs/ZhangBaSheMaoOrb.cs": "1c563744bbdafad478a56ec4552255054d74338ce6c15272a5c312f8f546df58",
+    "mod/src/Orbs/ZhuGeLianNuOrb.cs": "cc0153e8657f6c73c12c16a7b7f0d409926e269f2a9f45d3e6e7eb1974f4c1cc",
+    "mod/src/Orbs/ZhuQueYuShanOrb.cs": "892203e8f636fc7dac805a72827ff8fd8366f93cfe58bc8a1b19c9a7cc22f886",
+    "mod/src/Orbs/ZiXingOrb.cs": "f0ec56ca8cff54a54c125aa6e19c8cc082f6b2eef902b6e6e325275b34830903",
+    "mod/src/Patches/AntiPiracyNotice.cs": "d764541272b6988eab048c75afc7c6af511078e1b857e397ff555f141aaf4379",
+    "mod/src/Patches/LeBuSiShuHoverTipsPatch.cs": "aa2355671f1aa44aaecdb4af4e13233a91fd454d739bba62a42cdab0ddd2198d",
+    "mod/src/Patches/LieCangBodySelectionPatch.cs": "58560fe941d5442ee68f9aabe609af0786107881505500ff69919a4701ee5ebf",
+    "mod/src/Patches/LieCangLiFengDamageForcePatch.cs": "89eb510f2403619bcbf4644af4a7e37bf4d1bd58accb07851ae74d6c31709068",
+    "mod/src/Patches/ModelDbPatches.cs": "92ead9e4384d0d2fd39dfb34cec3fda5cb56518a6111dee6d42efb92ffe97f7b",
+    "mod/src/Patches/SearchableCardSelectPatch.cs": "b7f3106f25126e0705fb2979b21d7fbaaf753c0b9c5965230d01a36f7b3adcfe",
+    "mod/src/Patches/SharedRelicScopePatch.cs": "981819cfe3ee6e0cc62cd821c49b5a36b02671c17e17fa13d69528493e15ac63",
+    "mod/src/Patches/SweepModePatch.cs": "a7a1a7928b331c903b7cd9fd6b5fcbc15948e2917e459c0097c92119a75bacfe",
+    "mod/src/Patches/VoicePlayer.cs": "f2f10601bf6d75c57a8270aaac258e9822d73086e2a3118ea1cec73a485a39ae",
+    "mod/src/Patches/WuJiangExtraHoverTipsPatch.cs": "30d8654c73e10ee42affc428c5054863013dd6c1f04044d9150876720dbbef0c",
+    "mod/src/Patches/WuZhugeliangMeshVisualsPatch.cs": "b8782eeec9a1235bb62adf547621577bb1715ffaedaf36fb550a05102123e6e6",
+    "mod/src/Patches/WuZhugeliangSkinPatch.cs": "21f99bc0c7332c0331252c7352203824e1e3107c1d9bb0bf508aa7d749130616",
+    "mod/src/Patches/YjcmPatches.cs": "72363c23931c113cca5a5beeec77eb1f49b99b3248d5783645f384bd28dcf947",
+    "mod/src/Powers/BeiFaPower.cs": "fc358a1c7e3729550b6c55229cf08de131579e11f10e8b8f4e675120cd8faeab",
+    "mod/src/Powers/BiBuPower.cs": "8651e33d21f69f10c67572104cc9d83e9392e8d6f4705ab99edf9aa8c79c44f9",
+    "mod/src/Powers/CaiXiaPower.cs": "0751cad421d0b9cada981a0efd0210fae4fb18612421949f6c55b0891e9dfa1c",
+    "mod/src/Powers/HuoGongPower.cs": "53b6973a11d61219f2c5ca02caaeba59d8300d6c935795be03515fb3959585cc",
+    "mod/src/Powers/JinCuiPower.cs": "f342c83b36568b5cc499cf77baeeaf6b4cc7bca29f02aad99b3191e56b3d5898",
+    "mod/src/Powers/JueFaPower.cs": "36ab045fd79d2e13229d3f884c0690a88078d8cb311497bb25b0048062342d9f",
+    "mod/src/Powers/KuangFengPower.cs": "4371ddf9a91fdb7488fbd8d13ea68653a3a54080f87069f7e0d356534ae434db",
+    "mod/src/Powers/LiJiePower.cs": "40cda719fb04c32cc61ac507357821a2cabcf5ef7ccbf2b8855b4bff8e8092e2",
+    "mod/src/Powers/LianHuanPower.cs": "2e79d14100b2d1d2fdca6b8a2d90140ffe1483ff84da6bf9c81f4bac7d9752a4",
+    "mod/src/Powers/LieCangDiJiPower.cs": "e9998a937519f4c36c980c61f95e3a73243d047fc0034064f728ab63e89d622c",
+    "mod/src/Powers/LieCangLiFengPower.cs": "7e5571bbb1642c812c7b67724901c44f300e28e62a00c25e419416b874210496",
+    "mod/src/Powers/LieCangQiHaiPower.cs": "944643b8e137250ea1e3a783a75db18a75465e13249c4b071ab993d5b0b59c36",
+    "mod/src/Powers/LieXiangDrawPower.cs": "a1ba7c2951c85b336fc2a0e5516b83c1a152e518a499731a9241de542f3f6a35",
+    "mod/src/Powers/LongYinPower.cs": "bb2ea71e33f5b39fca79b06175b90cbb879847b0c9aa220f73fad21876c30d57",
+    "mod/src/Powers/MouSimaYiPowers.cs": "fe331c5dcc51e1c8d770ac203599ec4b8ab140a9b7c29ed53c892e320b7df498",
+    "mod/src/Powers/QingBeiPower.cs": "1201e8aa95c108a52ee09979337ba57ad552d55f85c054cc265b6a0871ac9298",
+    "mod/src/Powers/QingLongChargePower.cs": "6e07e4b8099f15e395337b282c0baa2eea6a1b1b72d759f239afd31749f3ec8c",
+    "mod/src/Powers/RenWanFreePower.cs": "a0ef165d6dcc802334a6443906f711e1b975e808598737e46e6ded9adb600692",
+    "mod/src/Powers/ShangYuPower.cs": "f8ee21819d828277f3f90e72cf5633739c40956abdfe0a1ba0f280f106f36913",
+    "mod/src/Powers/ShenCaiJudgmentPower.cs": "991b5c31c0faa851e18973ac04bbf4e2f4b37d8bc287e8466ec4279f6eabd510",
+    "mod/src/Powers/ShenZhaoYunLongHunPower.cs": "39797aa764ab4b758abc9ac4d992e2b4d07d7e49ba75cbe7f0e375ee40756fe4",
+    "mod/src/Powers/ShouLiPower.cs": "765d188bd753747951e344019198d7400e4bbcc6d2f60c584c6ccbc23c9ec613",
+    "mod/src/Powers/SiPower.cs": "7ec582787efa5c44f8ef3fb86a3f40444619c3c4ad1db939c43e4c99f35e4b58",
+    "mod/src/Powers/TianRenPower.cs": "3d7a764bec728fd02ea54058f7d1c888e7f004059fea2d7e8cbc5674feafa513",
+    "mod/src/Powers/TunChuPower.cs": "5091d095fbc333bd05fde00c60294a643f3b30273358800df28052c638a278ac",
+    "mod/src/Powers/WeiGuPower.cs": "6527550e5d1808fadd29b61325c81d7fc80bb1bfdf7896eba9c5afb69cc0d454",
+    "mod/src/Powers/WeiZhangXingCaiXianKuangPower.cs": "cbfeb6d3d1b6dbf4006944ca534d2510ffdb219e315ecc4f6216c98717a5b05f",
+    "mod/src/Powers/XiXingPower.cs": "3282c008702ea8574f82b6520e2ad41e9bf25e817e9df1b900c96ccdcea01ec2",
+    "mod/src/Powers/XingPower.cs": "e42f1db7f76ba42473b2529f8c2b09dd37bd5b2df8dd721b1960cea55910a68c",
+    "mod/src/Powers/XunShiJudgmentPower.cs": "e0c15448757d55657fadab0c22ebfa4c3cd1277580d11cea54f9bcc7ea14060f",
+    "mod/src/Powers/YiZhenQingMengPower.cs": "e48b8e7493cd19acdda75147e8ba83956e41b7354d33ce537e0779ba7c9a7472",
+    "mod/src/Powers/ZhanJueFreeAttackPower.cs": "3a7e9239982bb08834a6e7d9994af7083ce315981f3c8f380eb7b9fee564fb3e",
+    "mod/src/Powers/ZhanJueLifestealPower.cs": "5cbf52424b2ceac8e26815091fe1f72c9c332f0b6c64cb7a493b35358b9d608b",
+    "mod/src/Powers/ZhiJiPiercePower.cs": "f4dc0db85f8a8519f6aaf1a1d2ce6f62daa6609e6b55bb6ff1906e2fd9e7c1f6",
+    "mod/src/Powers/ZhiJiRetainPower.cs": "0f0a48a8c3e94c1a89eabfebef92ad77352967d167993468bcb7711ac0492fbe",
+    "mod/src/Relics/MouLuXunCanHun.cs": "5cc7e6fbee44e54aee90eb217dccfcefe9a00d9e78f23f3c414a7e9d7d709844",
+    "mod/src/Relics/NewSharedRelics.cs": "53cc894de74ea391f364c998da4ef491776fbcf5c07f5d8ccb1c4970675e86e8",
+    "mod/src/Relics/RenWanCanHun.cs": "a69b2ccf98746bdabd90df4d0dd59cf1546c38ceaffb7e589251c27287a200c6",
+    "mod/src/Relics/WeiDongZhuoGuangYong.cs": "b5fbfaaf1a29cd5b014348d8a1f5e40bbef826dcf5f31510ad1469f6808e2046",
+    "mod/src/Relics/WeiDongZhuoGuangYongRules.cs": "afa98930501b43001c74655b6e5a5e3d0688f00284cbff168545e600dd8cb3e5",
+    "mod/src/Relics/WeiDongZhuoRandomTargetScope.cs": "ae687dc2e68338131bd96e7a54419fde7dd3f5ce3145952ea73859f3ac4940dd",
+    "mod/src/Relics/WuZhangFeiRelics.cs": "0c37c193dc51fc23a61bc4b99265ec959e32ba7f3fa7adc3f59cf441a9f74d85",
+    "mod/src/Relics/XunXuCanHun.cs": "4b084ef18272eec47071b74d99a91599de28d1be7c2b0802b1b6e66909596651",
+    "mod/src/Relics/YaoYuanShuCanHun.cs": "166b28b39fadbd27e00b6035535612709b1c8b0859661c377d6dcac37e011558",
+    "mod/src/Relics/YjcmJieQingShi.cs": "f2a72bf149956758d52f9d48ac27f9d268fdafb4ce507afe13efcc75ac8ac6c7",
+    "mod/src/Relics/YjcmQingShi.cs": "d9684b5a28889fce740494caffd056fa4a56db561962d053640de364d0d2082c",
+    "tools/card-inputs/new-cards.json": "70028cd5332886b10b11a5074bbe61229d77de5d616b648efcf6d404cccf5f96"
+  },
+  "additionalModel": "WeiDongZhuoZhangBaSheMaoOrb",
+  "localizationCounts": {
+    "cards": 199,
+    "orbs": 2
+  },
+  "buildPerformed": false
+}

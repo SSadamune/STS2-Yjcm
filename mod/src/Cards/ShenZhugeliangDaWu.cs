@@ -1,0 +1,57 @@
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Powers;
+
+using STS2RitsuLib.Interop.AutoRegistration;
+
+namespace Yjcm;
+
+/// <summary>
+/// 神诸葛亮-大雾：1费罕见技能牌，消耗。消耗一颗星，获得1层无实体与1层缓冲。
+/// 升级后0费。
+/// </summary>
+[RegisterCard(typeof(WuZhugeliangCardPool))]
+public sealed class ShenZhugeliangDaWu : WuZhugeliangCard
+{
+    public ShenZhugeliangDaWu()
+        : base(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self) { }
+
+    public override HashSet<CardKeyword> CanonicalKeywords =>
+        [CardKeyword.Exhaust];
+
+    protected override HashSet<CardTag> CanonicalTags =>
+        [YjcmCardTags.WuJiang, YjcmCardTags.ShenJiang];
+
+    /// <summary>星/无实体/缓冲悬浮提示</summary>
+    protected override IEnumerable<IHoverTip> AdditionalHoverTips =>
+        [HoverTipFactory.FromPower<XingPower>(),
+         HoverTipFactory.FromPower<IntangiblePower>(),
+         HoverTipFactory.FromPower<BufferPower>()];
+
+    private static readonly string VoicePath = Path.Combine(
+        Path.GetDirectoryName(typeof(ShenZhugeliangDaWu).Assembly.Location)!,
+        "Voice", "Bank", "Assets", "da_wu.wav");
+
+    protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+    {
+        VoicePlayer.PlayWav(VoicePath);
+
+        // 消耗一颗星（星不足时扣血，但效果依然触发）
+        await XingPower.TryConsume(choiceContext, Owner.Creature, 1, this);
+
+        // 获得1层无实体
+        await PowerCmd.Apply<IntangiblePower>(choiceContext, Owner.Creature, 1, Owner.Creature, this, false);
+        // 获得1层缓冲
+        await PowerCmd.Apply<BufferPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this, false);
+    }
+
+    /// <summary>升级：1费→0费</summary>
+    protected override void OnUpgrade()
+    {
+        EnergyCost.UpgradeBy(-1);
+    }
+}

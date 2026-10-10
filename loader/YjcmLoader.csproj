@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <!-- The file is staged as Yjcm.dll for ModManager, but its assembly
+         identity must differ from the real versioned Yjcm content assembly. -->
+    <AssemblyName>Yjcm.Loader</AssemblyName>
+    <RootNamespace>Yjcm.Loader</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\dependencies\stable-0.107.1\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="sts2">
+      <HintPath>..\dependencies\stable-0.107.1\sts2.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

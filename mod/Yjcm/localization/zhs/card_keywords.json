@@ -1,0 +1,28 @@
+{
+  "YJCM_KEYWORD_ZHUAN_HUAN_JI.title": "转换技",
+  "YJCM_KEYWORD_ZHUAN_HUAN_JI.description": "打出后消耗，并将另一形态的牌加入抽牌堆。",
+
+  "YJCM_KEYWORD_WU_JIANG.title": "武将",
+  "YJCM_KEYWORD_WU_JIANG.description": "武将身份的标识。",
+
+  "YJCM_KEYWORD_SHEN.title": "神",
+  "YJCM_KEYWORD_SHEN.description": "神势力的标识。",
+
+  "YJCM_KEYWORD_SI.title": "死",
+  "YJCM_KEYWORD_SI.description": "层数大于场上存活单位总数时，回合结束直接死亡。",
+
+  "YJCM_KEYWORD_LIAN_HUAN.title": "连环",
+  "YJCM_KEYWORD_LIAN_HUAN.description": "受到伤害时，其他连环敌人受到等量伤害，触发后减少一层。",
+
+  "YJCM_KEYWORD_JI_SHANG.title": "击伤",
+  "YJCM_KEYWORD_JI_SHANG.description": "裂穹击伤了目标的部位，可选择以下效果之一：\n力烽 — 目标下一次造成伤害固定为1点。\n地机 — 目标下一次受到伤害增加100%。\n中枢 — 移除目标所有力量。\n气海 — 目标下一次获得的格挡值降为0。\n天冲 — 仅当目标已被击伤时可选，令目标直接死亡，你增加3点血量上限并恢复3点血量。",
+
+  "YJCM_KEYWORD_DI_YU_SHEN_PAN.title": "地狱审判",
+  "YJCM_KEYWORD_DI_YU_SHEN_PAN.description": "使一名敌人获得1层[gold]死[/gold]。从抽牌堆顶抽一张牌，根据类型触发：攻击牌施加7层中毒和15%最大生命伤害；技能牌施加2层虚弱和易伤；能力牌失去2点力量和所有格挡。",
+
+  "YJCM_KEYWORD_SHANG_YU.title": "赏誉",
+  "YJCM_KEYWORD_SHANG_YU.description": "回合开始时，将此牌从抽牌堆或弃牌堆加入手牌。",
+
+  "YJCM_KEYWORD_GUAN_XING.title": "观星",
+  "YJCM_KEYWORD_GUAN_XING.description": "观看抽牌堆顶一定数量的牌，将任意张置于抽牌堆底。"
+}
