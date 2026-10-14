@@ -1850,7 +1850,7 @@
     }
   ],
   "inputHashes": {
-    "mod/Yjcm/localization/zhs/cards.json": "171b9b63912a07b1e669611d3938132f4a5fa04d3005476116afad60de56f61c",
+    "mod/Yjcm/localization/zhs/cards.json": "26cbeab7162a408c7c3f8dae7633370905fad66bceb270478cacd9f06d55a9f9",
     "mod/Yjcm/localization/zhs/orbs.json": "d8beecb63d720051e7e1fff6654b85a966b313f26c2aa35ee7733846807eb71a",
     "mod/src/CardPools/WuZhugeliangCardPool.cs": "5f3ee30f3798441ec9b7ce840db23ec578b27f03f828926b65af88e9ff31b826",
     "mod/src/Cards/BaGuaZhen.cs": "23522be4dba44ede5e2866b64d5b59de6bdf9c73fad0a07af70424a27c4461a3",
@@ -1937,7 +1937,7 @@
     "mod/src/Cards/XingFaZhengZhiJi.cs": "a0a4cada9abf44038bcccb762ba32df732247a95c05c3bc7c7f53def4ae8f0a0",
     "mod/src/Cards/XingXiaHouBaJueFa.cs": "b1209d1943c944e81592d42c491348f9a7977f51d8fd878e9b54d6007e5f581e",
     "mod/src/Cards/XingXiaHouBaWeiGu.cs": "bfa72eb00df8b1c8afc5b01399251edbbafe624cd18a03983ee5b5e66cb64950",
-    "mod/src/Cards/YiZhenQingMeng.cs": "d37e0e19a7c8f0fff607d1a02775ee1520b63162749330c0d66c2bdf946d16b8",
+    "mod/src/Cards/YiZhenQingMeng.cs": "7c9cd6040e0275e3742f7c3cf037bca3c2684ab6723f5052e78333b21c0234e0",
     "mod/src/Cards/YjcmAccact.cs": "b93369b4d1f451855a268112074b54b97899eb879b2711c7db7d9a9239197008",
     "mod/src/Cards/YjcmCard.cs": "b7bf150f8fac175f572cb625c65f3732c5b2ea336900b349bdfd93873cb13d50",
     "mod/src/Cards/ZhangBaSheMao.cs": "d94aeeae79cdde11fbf161e61cc31bbe292258930f151656edca77e4fcc19e4a",
@@ -2023,7 +2023,7 @@
     "mod/src/Powers/XiXingPower.cs": "3282c008702ea8574f82b6520e2ad41e9bf25e817e9df1b900c96ccdcea01ec2",
     "mod/src/Powers/XingPower.cs": "e42f1db7f76ba42473b2529f8c2b09dd37bd5b2df8dd721b1960cea55910a68c",
     "mod/src/Powers/XunShiJudgmentPower.cs": "e0c15448757d55657fadab0c22ebfa4c3cd1277580d11cea54f9bcc7ea14060f",
-    "mod/src/Powers/YiZhenQingMengPower.cs": "e48b8e7493cd19acdda75147e8ba83956e41b7354d33ce537e0779ba7c9a7472",
+    "mod/src/Powers/YiZhenQingMengPower.cs": "9af9403ee93828cfb24c266c37f0c0d51149af63eb7e6fdb9f9d5fde37f09ed1",
     "mod/src/Powers/ZhanJueFreeAttackPower.cs": "3a7e9239982bb08834a6e7d9994af7083ce315981f3c8f380eb7b9fee564fb3e",
     "mod/src/Powers/ZhanJueLifestealPower.cs": "5cbf52424b2ceac8e26815091fe1f72c9c332f0b6c64cb7a493b35358b9d608b",
     "mod/src/Powers/ZhiJiPiercePower.cs": "f4dc0db85f8a8519f6aaf1a1d2ce6f62daa6609e6b55bb6ff1906e2fd9e7c1f6",
