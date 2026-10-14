@@ -1992,7 +1992,7 @@
     "mod/src/Patches/WuJiangExtraHoverTipsPatch.cs": "30d8654c73e10ee42affc428c5054863013dd6c1f04044d9150876720dbbef0c",
     "mod/src/Patches/WuZhugeliangMeshVisualsPatch.cs": "b8782eeec9a1235bb62adf547621577bb1715ffaedaf36fb550a05102123e6e6",
     "mod/src/Patches/WuZhugeliangSkinPatch.cs": "21f99bc0c7332c0331252c7352203824e1e3107c1d9bb0bf508aa7d749130616",
-    "mod/src/Patches/YjcmPatches.cs": "72363c23931c113cca5a5beeec77eb1f49b99b3248d5783645f384bd28dcf947",
+    "mod/src/Patches/YjcmPatches.cs": "661aa2c97f0c7293491de036f6601eda07bed4a05399b4c14bba060204942a1f",
     "mod/src/Powers/BeiFaPower.cs": "fc358a1c7e3729550b6c55229cf08de131579e11f10e8b8f4e675120cd8faeab",
     "mod/src/Powers/BiBuPower.cs": "8651e33d21f69f10c67572104cc9d83e9392e8d6f4705ab99edf9aa8c79c44f9",
     "mod/src/Powers/CaiXiaPower.cs": "0751cad421d0b9cada981a0efd0210fae4fb18612421949f6c55b0891e9dfa1c",
