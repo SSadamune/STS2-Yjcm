@@ -20,6 +20,7 @@ public sealed class YiZhenQingMeng : WuZhugeliangCard
     public YiZhenQingMeng()
         : base(2, CardType.Skill, CardRarity.Rare, TargetType.Self) { }
 
+    // ※模组联动只作为额外悬停提示，不写入牌面。
     protected override IEnumerable<IHoverTip> AdditionalHoverTips =>
         [..YiZhenQingMengInterop.EffectHoverTips(this),
          HoverTipFactory.FromPower<XingPower>(),
@@ -39,9 +40,18 @@ public sealed class YiZhenQingMeng : WuZhugeliangCard
             await YiZhenQingMengInterop.ApplyEffect(
                 choiceContext, enemy, 7, Owner.Creature, this, useBurning);
 
-        // 触发所有敌人的对应能力2次（每次触发减少一层）。
+        // 触发所有敌人的对应能力2次。灼烧交由孙乾宇宙执行完整的伤害与熄灭流程。
         foreach (var enemy in CombatState.HittableEnemies)
         {
+            if (useBurning)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    if (!await SunqianUniverseInterop.TriggerBurning(choiceContext, enemy, this)) break;
+                }
+                continue;
+            }
+
             var effect = YiZhenQingMengInterop.FindEffect(enemy, useBurning);
             if (effect == null || effect.Amount <= 0) continue;
 

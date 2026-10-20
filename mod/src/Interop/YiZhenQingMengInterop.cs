@@ -1,4 +1,3 @@
-using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -13,8 +12,8 @@ using MegaCrit.Sts2.Core.Models;
 namespace Yjcm.Interop;
 
 /// <summary>
-/// 《一枕清梦》与“孙乾宇宙”的可选联动。龙套演员使用此牌时，牌面与全部结算
-/// 统一改为操作“灼烧”；未安装联动模组时保持原“火攻”逻辑。
+/// 《一枕清梦》与“孙乾宇宙”的可选联动。龙套演员打出时，结算改为操作“灼烧”。
+/// 卡面是否改成紫色灼烧、以及是否显示「※模组联动」悬停，由 <see cref="SunqianLinkHover"/> 决定。
 /// </summary>
 internal static class YiZhenQingMengInterop
 {
@@ -31,7 +30,8 @@ internal static class YiZhenQingMengInterop
 
     public static IEnumerable<IHoverTip> EffectHoverTips(CardModel card)
     {
-        if (ShowsCombatEffect(MutableOwner(card)))
+        _ = card;
+        if (SunqianLinkHover.ShowsBurningKeyword())
         {
             if (SunqianUniverseInterop.CreateBurningHoverTip() is { } burningTip)
                 yield return burningTip;
@@ -43,7 +43,7 @@ internal static class YiZhenQingMengInterop
 
     public static IEnumerable<IHoverTip> LibraryHoverTips()
     {
-        if (!IsModReady || IsCombatInProgress())
+        if (!SunqianLinkHover.ShouldShow())
             yield break;
 
         yield return new HoverTip(
@@ -51,13 +51,16 @@ internal static class YiZhenQingMengInterop
             new LocString("cards", LibraryHoverKey));
     }
 
-    public static void AddEffectText(LocString description, CardModel card) =>
+    public static void AddEffectText(LocString description, CardModel card)
+    {
+        _ = card;
         description.Add(
             EffectTextArg,
             new LocString(
                 "cards",
-                ShowsCombatEffect(MutableOwner(card)) ? BurningTextKey : FireAttackTextKey)
+                SunqianLinkHover.ShowsBurningKeyword() ? BurningTextKey : FireAttackTextKey)
                 .GetFormattedText());
+    }
 
     public static async Task ApplyEffect(
         PlayerChoiceContext choiceContext,
@@ -82,13 +85,4 @@ internal static class YiZhenQingMengInterop
         useBurning
             ? target.Powers?.FirstOrDefault(SunqianUniverseInterop.IsBurningPower)
             : target.Powers?.OfType<HuoGongPower>().FirstOrDefault();
-
-    private static Player? MutableOwner(CardModel card) =>
-        card.IsMutable ? card.Owner : null;
-
-    private static bool ShowsCombatEffect(Player? owner) =>
-        IsCombatInProgress() && Affects(owner);
-
-    private static bool IsCombatInProgress() =>
-        CombatManager.Instance is { IsInProgress: true };
 }
