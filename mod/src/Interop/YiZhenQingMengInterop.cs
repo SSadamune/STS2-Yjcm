@@ -20,8 +20,6 @@ internal static class YiZhenQingMengInterop
     private const string EffectTextArg = "DreamFireText";
     private const string FireAttackTextKey = "YJCM_CARD_YI_ZHEN_QING_MENG.fireAttackInlineText";
     private const string BurningTextKey = "YJCM_CARD_YI_ZHEN_QING_MENG.burningInlineText";
-    private const string HoverTitleKey = "YJCM_CARD_YI_ZHEN_QING_MENG.interopHoverTitle";
-    private const string LibraryHoverKey = "YJCM_CARD_YI_ZHEN_QING_MENG.interopLibraryHover";
 
     public static bool IsModReady => SunqianUniverseInterop.IsReady;
 
@@ -47,8 +45,8 @@ internal static class YiZhenQingMengInterop
             yield break;
 
         yield return new HoverTip(
-            new LocString("cards", HoverTitleKey),
-            new LocString("cards", LibraryHoverKey));
+            new LocString("cards", SunqianLinkHover.TitleKey),
+            new LocString("cards", SunqianLinkHover.BodyKey));
     }
 
     public static void AddEffectText(LocString description, CardModel card)

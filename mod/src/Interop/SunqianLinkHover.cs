@@ -14,6 +14,9 @@ namespace Yjcm.Interop;
 /// </summary>
 internal static class SunqianLinkHover
 {
+    public const string TitleKey = "sunqian_burning_link.hoverTitle";
+    public const string BodyKey = "sunqian_burning_link.libraryHover";
+
     /// <summary>情况 B。</summary>
     public static bool ShouldShow()
     {

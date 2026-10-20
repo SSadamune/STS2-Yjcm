@@ -66,6 +66,8 @@ foreach($required in @(
 $fanInteropEarly=Get-Content -LiteralPath (Join-Path $workspace 'mod\src\Interop\ZhuQueYuShanInterop.cs') -Raw
 if(-not $dreamInterop.Contains('SunqianLinkHover.ShouldShow()') -or
    -not $fanInteropEarly.Contains('SunqianLinkHover.ShouldShow()') -or
+   -not $dreamInterop.Contains('SunqianLinkHover.BodyKey') -or
+   -not $fanInteropEarly.Contains('SunqianLinkHover.BodyKey') -or
    -not $dreamInterop.Contains('SunqianLinkHover.ShowsBurningKeyword()') -or
    -not $fanInteropEarly.Contains('SunqianLinkHover.ShowsBurningKeyword()')) {
     throw 'Interop notice and keyword tint must stay separated'
@@ -104,7 +106,7 @@ if($fanDescription -ne $cardsLoc.'YJCM_CARD_WEI_DONG_ZHUO_ZHU_QUE_YU_SHAN.descri
    ([regex]::Matches($fanDescription,'\{FanFireText\}').Count -ne 1) -or
    $cardsLoc.'YJCM_CARD_ZHU_QUE_YU_SHAN.fireAttackInlineText' -notmatch '火攻' -or
    $cardsLoc.'YJCM_CARD_ZHU_QUE_YU_SHAN.burningInlineText' -ne '[purple]灼烧[/purple]' -or
-   $cardsLoc.'YJCM_CARD_ZHU_QUE_YU_SHAN.interopLibraryHover' -notmatch '所有.*火攻.*灼烧' -or
+   $cardsLoc.'sunqian_burning_link.libraryHover' -ne '模组[purple]孙乾宇宙[/purple]角色使用此牌时，将给予[gold]灼烧[/gold]而非[gold]火攻[/gold]。' -or
    ([regex]::Matches($orbsLoc.'YJCM_ORB_ZHU_QUE_YU_SHAN_ORB.description','\{FanFireText\}').Count -ne 1)) {
     throw 'ZhuQueYuShan dynamic localization drift'
 }
@@ -112,7 +114,7 @@ $dreamDescription=$cardsLoc.'YJCM_CARD_YI_ZHEN_QING_MENG.description'
 if(([regex]::Matches($dreamDescription,'\{DreamFireText\}').Count -ne 4) -or
    $cardsLoc.'YJCM_CARD_YI_ZHEN_QING_MENG.fireAttackInlineText' -notmatch '火攻' -or
    $cardsLoc.'YJCM_CARD_YI_ZHEN_QING_MENG.burningInlineText' -ne '[purple]灼烧[/purple]' -or
-   $cardsLoc.'YJCM_CARD_YI_ZHEN_QING_MENG.interopLibraryHover' -notmatch '所有.*火攻.*灼烧') {
+   $cardsLoc.'sunqian_burning_link.hoverTitle' -ne '※模组联动') {
     throw 'YiZhenQingMeng dynamic localization drift'
 }
 $project=Join-Path $PSScriptRoot 'InteropTests\InteropTests.csproj'

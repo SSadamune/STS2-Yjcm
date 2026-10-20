@@ -1850,7 +1850,7 @@
     }
   ],
   "inputHashes": {
-    "mod/Yjcm/localization/zhs/cards.json": "5bd0af9f91f8d962bcd21bdbc03937b4b4d00dfa8b19d8c40e610688d38542b4",
+    "mod/Yjcm/localization/zhs/cards.json": "9dcb0f1501636078a9d7497da5afa853a16448cc688bbbacdb3e7e69c2d56452",
     "mod/Yjcm/localization/zhs/orbs.json": "a2fe77e8c448dcec15f835c49885107b350d1b66a0310ba9b8c058690a52c3e4",
     "mod/src/CardPools/WuZhugeliangCardPool.cs": "5f3ee30f3798441ec9b7ce840db23ec578b27f03f828926b65af88e9ff31b826",
     "mod/src/Cards/BaGuaZhen.cs": "23522be4dba44ede5e2866b64d5b59de6bdf9c73fad0a07af70424a27c4461a3",
@@ -2043,7 +2043,7 @@
   },
   "additionalModel": "WeiDongZhuoZhangBaSheMaoOrb",
   "localizationCounts": {
-    "cards": 203,
+    "cards": 201,
     "orbs": 2
   },
   "buildPerformed": false

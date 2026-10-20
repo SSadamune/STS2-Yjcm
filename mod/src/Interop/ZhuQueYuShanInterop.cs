@@ -21,8 +21,6 @@ internal static class ZhuQueYuShanInterop
     private const string EffectTextArg = "FanFireText";
     private const string FireAttackTextKey = "YJCM_CARD_ZHU_QUE_YU_SHAN.fireAttackInlineText";
     private const string BurningTextKey = "YJCM_CARD_ZHU_QUE_YU_SHAN.burningInlineText";
-    private const string HoverTitleKey = "YJCM_CARD_ZHU_QUE_YU_SHAN.interopHoverTitle";
-    private const string LibraryHoverKey = "YJCM_CARD_ZHU_QUE_YU_SHAN.interopLibraryHover";
 
     public static bool IsModReady => SunqianUniverseInterop.IsReady;
 
@@ -47,8 +45,8 @@ internal static class ZhuQueYuShanInterop
             yield break;
 
         yield return new HoverTip(
-            new LocString("cards", HoverTitleKey),
-            new LocString("cards", LibraryHoverKey));
+            new LocString("cards", SunqianLinkHover.TitleKey),
+            new LocString("cards", SunqianLinkHover.BodyKey));
     }
 
     public static void AddEffectText(LocString description, CardModel card)

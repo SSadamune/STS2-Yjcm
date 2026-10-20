@@ -30,8 +30,6 @@
   "YJCM_CARD_WEI_DONG_ZHUO_ZHU_QUE_YU_SHAN.description": "装备朱雀羽扇：每次攻击使敌人获得2层{FanFireText}。",
   "YJCM_CARD_WEI_DONG_ZHUO_ZHU_QUE_YU_SHAN.fireAttackInlineText": "[gold]火攻[/gold]",
   "YJCM_CARD_WEI_DONG_ZHUO_ZHU_QUE_YU_SHAN.burningInlineText": "[purple]灼烧[/purple]",
-  "YJCM_CARD_WEI_DONG_ZHUO_ZHU_QUE_YU_SHAN.interopHoverTitle": "※模组联动",
-  "YJCM_CARD_WEI_DONG_ZHUO_ZHU_QUE_YU_SHAN.interopLibraryHover": "孙乾宇宙角色使用此牌时，描述和结算中的所有[gold]火攻[/gold]均替换为[gold]灼烧[/gold]。",
   "YJCM_CARD_WEI_DONG_ZHUO_ZHU_GE_LIAN_NU.title": "诸葛连弩",
   "YJCM_CARD_WEI_DONG_ZHUO_ZHU_GE_LIAN_NU.description": "装备诸葛连弩：所有攻击牌费用-1。",
   "YJCM_CARD_WEI_DONG_ZHUO_HAN_BING_JIAN.title": "寒冰剑",
