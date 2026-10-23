@@ -22,5 +22,19 @@
   "YJCM_EVENT_QU_YUAN_TOU_JIANG.pages.INITIAL.options.LEAVE.title": "还是离远一点吧",
   "YJCM_EVENT_QU_YUAN_TOU_JIANG.pages.INITIAL.options.LEAVE.description": "无事发生。",
   "YJCM_EVENT_QU_YUAN_TOU_JIANG.pages.APPROACH.description": "你走上前去。屈原将一篇《离骚》交到你的手中，仍望着江水长叹。",
-  "YJCM_EVENT_QU_YUAN_TOU_JIANG.pages.LEAVE.description": "你决定还是离远一点，沿着江岸继续前行。"
+  "YJCM_EVENT_QU_YUAN_TOU_JIANG.pages.LEAVE.description": "你决定还是离远一点，沿着江岸继续前行。",
+  "YJCM_EVENT_SHANG_FANG_GU_ZHI_YU.title": "上方谷之雨",
+  "YJCM_EVENT_SHANG_FANG_GU_ZHI_YU.pages.INITIAL.description": "独木难支益州地，上方雨落万事空\n先帝大业化清梦，只叹天意助冢虎",
+  "YJCM_EVENT_SHANG_FANG_GU_ZHI_YU.pages.INITIAL.options.DREAM.title": "是梦",
+  "YJCM_EVENT_SHANG_FANG_GU_ZHI_YU.pages.INITIAL.options.DREAM.description": "获得[gold]一枕清梦[/gold]。",
+  "YJCM_EVENT_SHANG_FANG_GU_ZHI_YU.pages.INITIAL.options.SIGH.title": "是叹息",
+  "YJCM_EVENT_SHANG_FANG_GU_ZHI_YU.pages.INITIAL.options.SIGH.description": "获得[gold]上方谷之叹[/gold]。",
+  "YJCM_EVENT_SHANG_FANG_GU_ZHI_YU.pages.INITIAL.options.FATE.title": "是天意",
+  "YJCM_EVENT_SHANG_FANG_GU_ZHI_YU.pages.INITIAL.options.FATE.description": "获得[gold]比夷陵之火还好啊[/gold]。",
+  "YJCM_EVENT_SHANG_FANG_GU_ZHI_YU.pages.INITIAL.options.HISTORY.title": "是历史",
+  "YJCM_EVENT_SHANG_FANG_GU_ZHI_YU.pages.INITIAL.options.HISTORY.description": "获得遗物[gold]七星灯[/gold]。",
+  "YJCM_EVENT_SHANG_FANG_GU_ZHI_YU.pages.DREAM.description": "你从一枕清梦中醒来。",
+  "YJCM_EVENT_SHANG_FANG_GU_ZHI_YU.pages.SIGH.description": "雨落上方谷，唯余一声长叹。",
+  "YJCM_EVENT_SHANG_FANG_GU_ZHI_YU.pages.FATE.description": "天意如此，前路仍须行。",
+  "YJCM_EVENT_SHANG_FANG_GU_ZHI_YU.pages.HISTORY.description": "你拾起七星灯，将一线生机带向前路。"
 }

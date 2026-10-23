@@ -34,7 +34,7 @@ public sealed class JieDongFeng : WuZhugeliangCard
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(77, ValueProp.Move),
-        new DynamicVar(HgKey, 7)
+        new HuoGongVar(HgKey, 7)
     ];
 
     private static readonly string VoicePath = Path.Combine(

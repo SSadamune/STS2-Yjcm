@@ -1,4 +1,6 @@
 {
+  "YJCM_POWER_SHUI_HUO_JIAN_RONG_POWER.title": "水火兼容",
+  "YJCM_POWER_SHUI_HUO_JIAN_RONG_POWER.description": "你的虚弱改为攻击伤害增加25%，易伤改为受到的攻击伤害降低50%，脆弱改为从卡牌获得的格挡增加25%。层数与持续回合不变。",
   "LIAN_HUAN_POWER.title": "连环",
   "LIAN_HUAN_POWER.description": "受到伤害时，使其他有连环的敌人受到等量伤害，触发后减少一层。",
   "LIAN_HUAN_POWER.smartDescription": "受到伤害时，其他连环敌人受到 {Amount} 点伤害。",

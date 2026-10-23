@@ -11,4 +11,7 @@ func _ready():
 	# Keep the wide weapon clear of the left edge while placing the body nearer its health bar.
 	character.scale = Vector2.ONE * 0.42
 	character.position = Vector2(95, -174)
+	if bool(get_tree().root.get_meta("weidongzhuo_taishan_skin", false)):
+		# TaiShan body-only bounds: Godot Y -584.784..252.167; feet at the original baseline.
+		character.position = Vector2(95, -106)
 	add_child(character)

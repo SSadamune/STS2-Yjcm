@@ -22,11 +22,29 @@ namespace Yjcm;
 public class MainFile
 {
     public const string ModId = "Yjcm";
+    private static readonly object InitializationGate = new();
+    private static bool _initializing;
+    private static bool _initialized;
 
     public static Logger Logger { get; } =
         new(ModId, LogType.Generic);
 
     public static void Initialize()
+    {
+        lock (InitializationGate)
+        {
+            if (_initialized || _initializing) return;
+            _initializing = true;
+            try
+            {
+                InitializeCore();
+                _initialized = true;
+            }
+            finally { _initializing = false; }
+        }
+    }
+
+    private static void InitializeCore()
     {
         ScriptManagerBridge.LookupScriptsInAssembly(Assembly.GetExecutingAssembly());
 
@@ -90,41 +108,22 @@ public class MainFile
 
         // Harmony 补丁：逐个挂载，单个失败只警告不影响其他（防止某目标在 0.107.1 缺失时拖垮全部补丁）
         Harmony harmony = new(ModId);
-#if GAME_BETA
-        harmony.PatchAll();
-
-        // 调试：确认搜索框注入补丁是否成功挂载到选牌屏 _Ready（信息进 godot.log 便于排查）
-#else
         int ok = 0, fail = 0;
         foreach (var cls in Assembly.GetExecutingAssembly().GetTypes()
                      .Where(t => t.GetCustomAttributes(typeof(HarmonyPatch), false).Length > 0))
         {
-#endif
             try
             {
-#if GAME_BETA
-            var searchTarget = AccessTools.Method(typeof(NSimpleCardSelectScreen), "_Ready");
-            var patchInfo = searchTarget == null ? null : Harmony.GetPatchInfo(searchTarget);
-            Logger.Info($"搜索补丁目标: {searchTarget?.DeclaringType?.Name}.{searchTarget?.Name}（是否找到: {searchTarget != null}），已挂载 Postfix 数量: {patchInfo?.Postfixes?.Count ?? 0}");
-#else
                 harmony.CreateClassProcessor(cls).Patch();
                 ok++;
-#endif
             }
             catch (Exception ex)
             {
-#if GAME_BETA
-            Logger.Warn($"搜索补丁检查失败: {ex.Message}");
-#else
                 fail++;
                 Logger.Warn($"补丁挂载失败（已跳过）: {cls.Name}: {ex.Message}");
             }
-#endif
         }
-#if GAME_BETA
-#else
         Logger.Info($"初始化步骤4完成: Harmony 补丁 成功={ok} 失败={fail}");
-#endif
 
         Api.PublicApi.Initialize([
             "YJCM_CHARACTER_WU_ZHUGELIANG",
@@ -134,5 +133,4 @@ public class MainFile
         ]);
         Logger.Info("一将成名 Mod 加载成功，双向联动 API v1 已就绪。");
     }
-
 }

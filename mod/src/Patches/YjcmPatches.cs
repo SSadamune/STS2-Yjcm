@@ -106,8 +106,8 @@ public static class JinCuiBgmStopRoomChangePatch
 /// <summary>
 /// 转换技关键词自动消耗：拦截 GetResultPileTypeForCardPlay（0.107.1 返回 PileType），
 /// 如果卡牌包含转换技关键词，强制返回消耗堆。
-/// 注解挂载：由 Loader/游戏 PatchAll 自动应用（Loader 不调用真实 MainFile，
-/// 原 MainFile 手动挂载在 bundle 加载方式下不生效，导致转换技不自动消耗）。
+/// 注解挂载：Loader 选择版本程序集后调用真实 MainFile 的统一幂等入口，
+/// 由 MainFile 挂载补丁，避免 Loader 与内容程序集重复 PatchAll。
 /// </summary>
 #if GAME_BETA
 [HarmonyPatch(typeof(CardModel), "GetResultLocationForCardPlay")]
@@ -239,17 +239,11 @@ public static class OrobasRefinementPatch
     /// <summary>情势 → 界情势；其余交还游戏原逻辑（含原版起始遗物升级）</summary>
     static bool Prefix(RelicModel starterRelic, ref RelicModel __result)
     {
-#if GAME_BETA
-        MainFile.Logger.Info($"[升级] GetUpgradedStarterRelic 被调用, starter={starterRelic?.Id.Entry ?? "null"}, 是情势={starterRelic is YjcmQingShi}");
-#else
-#endif
         if (starterRelic is YjcmQingShi)
         {
-            __result = ModelDb.Relic<YjcmJieQingShi>().ToMutable();
-#if GAME_BETA
-            MainFile.Logger.Info($"[升级] 情势→界情势: {__result.Id.Entry}");
-#else
-#endif
+            // 图鉴的解锁/已见集合存放 canonical 模型；可变副本会被当作未解锁。
+            // TouchOfOrobas.AfterObtained 自己会为实际替换创建可变实例。
+            __result = ModelDb.Relic<YjcmJieQingShi>();
             return false;
         }
         return true;

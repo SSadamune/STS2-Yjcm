@@ -30,7 +30,7 @@ foreach ($v in $variants) {
     if ($LASTEXITCODE -ne 0) { Get-Content -LiteralPath (Join-Path $logs "$v.log") -Tail 50; throw "Build failed: $v" }
     Copy-Item -LiteralPath (Join-Path $repo "artifacts/bin/Yjcm/$v/Release/Yjcm.dll") -Destination (Join-Path $stage "Yjcm.$version.dll") -Force
     if (-not $SkipTests) {
-        foreach ($test in @('check_assembly','check_guang_yong','check_liecang_ui','check_interop','check_card_effects')) {
+        foreach ($test in @('check_assembly','check_guang_yong','check_liecang_ui','check_interop','check_card_effects','check_shangfanggu','check_character_attacks','check_collaboration_cards','check_weidongzhuo_skin')) {
             $arguments = @('-Variant',$v)
             if ($test -eq 'check_assembly') { $arguments += @('-Mode','test') }
             & pwsh -NoProfile -File (Join-Path $repo "tests/$test.ps1") @arguments

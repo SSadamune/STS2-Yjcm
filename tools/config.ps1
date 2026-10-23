@@ -1,5 +1,15 @@
 $ErrorActionPreference = 'Stop'
 $script:RepositoryRoot = Split-Path $PSScriptRoot -Parent
+function Get-YjcmRetiredRuntimePaths([string]$Root) {
+    # Exact retired prototype files only. Never mirror-delete unknown mod/user files.
+    $rootPath=[IO.Path]::GetFullPath($Root)
+    $rootPrefix=$rootPath.TrimEnd([IO.Path]::DirectorySeparatorChar)+[IO.Path]::DirectorySeparatorChar
+    foreach($relative in @('Spine/WeiDongZhuo/Combat/character_attack.skel','Spine/MouZhugeliang/Combat/character_attack.skel')) {
+        $path=[IO.Path]::GetFullPath((Join-Path $rootPath $relative))
+        if(!$path.StartsWith($rootPrefix,[StringComparison]::OrdinalIgnoreCase)){throw 'Retired resource outside runtime root'}
+        $path
+    }
+}
 function Get-YjcmConfiguration {
     $configFile = Join-Path $script:RepositoryRoot 'build.local.json'
     $config = if (Test-Path -LiteralPath $configFile) { Get-Content -LiteralPath $configFile -Raw | ConvertFrom-Json } else { [pscustomobject]@{} }

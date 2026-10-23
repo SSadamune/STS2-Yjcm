@@ -56,5 +56,7 @@ public sealed class WuZhugeliangCardPool : TypeListCardPoolModel
         typeof(WoLongZhuGeLiangHuoJi), typeof(WoLongZhuGeLiangKanPo),
         // 乐诸葛果
         typeof(LeZhuGeGuoChengYan),
+        // 联动牌（仅武诸葛亮）
+        typeof(SunQianShuiHuoWuDi), typeof(XinSanGuoShuiHuoJianRong),
     };
 }

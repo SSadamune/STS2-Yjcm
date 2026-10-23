@@ -31,6 +31,9 @@ $manifest=Get-Content -LiteralPath (Join-Path $target 'mod_manifest.json') -Raw 
 if ($manifest.id -ne 'Yjcm') { throw 'Wrong ModId' }
 if ($CheckSteam) { Assert-SameFile (Join-Path $repo 'artifacts/dist/yjcm/Yjcm.pck') (Join-Path $target 'Yjcm.pck') }
 if (-not (Test-Path -LiteralPath (Join-Path $target 'Yjcm.pck'))) { throw 'PCK missing' }
+foreach($retired in Get-YjcmRetiredRuntimePaths $target) {
+    if(Test-Path -LiteralPath $retired){throw "Retired attack prototype remains: $retired"}
+}
 $count=0
 foreach ($folder in @('Voice','Spine','MeshAnimation')) {
     $sourceRoot=Join-Path $repo "assets/loose/$folder"

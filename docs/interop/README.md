@@ -1,12 +1,15 @@
 # 一将成名双向联动接口 v1
 
-通用 BCL 桥接保持 v1；新增面向孙乾宇宙的火攻/装备栏强类型玩法接口及反向可选代理，见 [孙乾宇宙接入](孙乾宇宙接入.md)。不自动改变牌、事件、遗物效果，不处理无关 Mod 的兼容补丁。
+已接入的具体联动事件：[上方谷之雨](上方谷之雨.md)（孙乾宇宙 / 新三国可选依赖）。
+已接入的灼烧联动：[一枕清梦与朱雀羽扇](孙乾灼烧联动.md)，来自 SSadamune 的 PR #1。
+
+通用 BCL 桥接保持 v1；面向孙乾宇宙的火攻/装备栏强类型玩法接口及反向可选代理见 [孙乾宇宙接入](孙乾宇宙接入.md)。通用接口自身不改变卡牌效果；具体联动按上述单独文档实现，不处理无关 Mod 的兼容补丁。
 教程依据：`xiazai/SlayTheSpire2ModdingTutorials-master/SlayTheSpire2ModdingTutorials-master/RitsuLib/03 - 模组工具/10 - 模组联动/README.md`。
 
 ## 定位与双向流程
 
 - Mod ID：`Yjcm`；实际内容程序集：`Yjcm`。加载器 `Yjcm.Loader` 不是接口所在程序集。
-- 公开类型：`Yjcm.Api.PublicApi`，API 版本 `1`（与 Mod 发布版本 `1.2.0` 无关）。
+- 公开类型：`Yjcm.Api.PublicApi`，API 版本 `1`（与 Mod 发布版本 `1.2.1` 无关）。
 - 按教程推荐，对方使用 `[AssemblyInterop("Yjcm.Api.PublicApi, Yjcm")]`，无需引用我们的 DLL。
 - 对方 → 我们：调用 `InvokeAsync(operation, payloadJson)` 或只读查询方法。
 - 我们 → 对方：对方通过 `RegisterPartner` 注册能力列表和接收回调，我们调用 `CallPartnerAsync`。

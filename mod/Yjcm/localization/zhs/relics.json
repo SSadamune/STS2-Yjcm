@@ -63,5 +63,8 @@
   "YJCM_RELIC_WEI_DONG_ZHUO_GUANG_YONG.flavor": "一朝奉诏入京洛，百官屏息暗生微",
   "YJCM_RELIC_WEI_DONG_ZHUO_JIE_GUANG_YONG.title": "界犷勇",
   "YJCM_RELIC_WEI_DONG_ZHUO_JIE_GUANG_YONG.description": "你使用以自己为目标的牌时，增加一点血量上限并摸一张牌，你使用以敌人为目标的牌时，偷取其一种增益，然后若你已受伤，减少一点血量上限",
-  "YJCM_RELIC_WEI_DONG_ZHUO_JIE_GUANG_YONG.flavor": "废立全凭手中戟，权倾天下势巍巍"
+  "YJCM_RELIC_WEI_DONG_ZHUO_JIE_GUANG_YONG.flavor": "废立全凭手中戟，权倾天下势巍巍",
+  "YJCM_RELIC_QI_XING_DENG.title": "七星灯",
+  "YJCM_RELIC_QI_XING_DENG.description": "当你的生命值要降到0或以下时，将生命值回复至7点，获得7点能量并抽7张牌。回合外触发时，能量于下回合获得。（仅限一次）",
+  "YJCM_RELIC_QI_XING_DENG.flavor": "魏延将军，走慢点！"
 }

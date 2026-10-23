@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Texture2D" path="res://Yjcm/Images/events/shang_fang_gu_zhi_yu.png" id="1_art"]
+[ext_resource type="Script" path="res://Yjcm/scenes/shang_fang_gu_event_background.gd" id="2_layout"]
+
+[sub_resource type="Gradient" id="Gradient_reading"]
+offsets = PackedFloat32Array(0, 0.3, 0.56, 0.8, 1)
+colors = PackedColorArray(0.02, 0.03, 0.04, 0.04, 0.02, 0.03, 0.04, 0.08, 0.02, 0.03, 0.04, 0.48, 0.02, 0.03, 0.04, 0.66, 0.02, 0.03, 0.04, 0.7)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture_reading"]
+gradient = SubResource("Gradient_reading")
+fill_from = Vector2(0, 0)
+fill_to = Vector2(1, 0)
+
+[node name="ShangFangGuBackdrop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_layout")
+
+[node name="Base" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.045, 0.075, 0.09, 1)
+
+[node name="ArtworkClip" type="Control" parent="."]
+clip_contents = true
+layout_mode = 1
+anchor_top = 0.11
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Artwork" type="TextureRect" parent="ArtworkClip"]
+layout_mode = 0
+mouse_filter = 2
+texture = ExtResource("1_art")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="ReadingShade" type="TextureRect" parent="."]
+layout_mode = 1
+anchor_top = 0.11
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture_reading")
+expand_mode = 1

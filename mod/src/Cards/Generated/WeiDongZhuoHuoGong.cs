@@ -21,7 +21,7 @@ public sealed class WeiDongZhuoHuoGong : WeiDongZhuoCard
         : base(1, CardType.Skill, CardRarity.Common, TargetType.AnyEnemy) { }
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
-        [new DynamicVar(StacksKey, 6m)];
+        [new HuoGongVar(StacksKey, 6m)];
 
     protected override IEnumerable<IHoverTip> AdditionalHoverTips =>
         [HoverTipFactory.FromPower<HuoGongPower>()];

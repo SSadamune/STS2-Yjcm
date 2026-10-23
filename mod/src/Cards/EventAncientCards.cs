@@ -148,7 +148,7 @@ public sealed class MouZhugeliangHuoJi : WuZhugeliangCard
     public override string CustomPortraitPath => "mou_zhugeliang_huo_ji.png".CardImagePath();
     public override HashSet<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     protected override HashSet<CardTag> CanonicalTags => [YjcmCardTags.WuJiang, YjcmCardTags.Shu];
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DynamicVar(HuoGongKey, 10m)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new HuoGongVar(HuoGongKey, 10m)];
     protected override IEnumerable<IHoverTip> AdditionalHoverTips =>
         [HoverTipFactory.FromPower<HuoGongPower>(), HoverTipFactory.FromPower<BufferPower>()];
 

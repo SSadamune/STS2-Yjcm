@@ -108,6 +108,8 @@ aliases.WuZhugeliangCard = 'WeiDongZhuoCard';
 aliases.ZhangBaSheMaoOrb = 'WeiDongZhuoZhangBaSheMaoOrb';
 
 const excludedSpecial = {
+  SunQianShuiHuoWuDi: '武诸葛亮专属联动牌，不复制到董卓卡池',
+  XinSanGuoShuiHuoJianRong: '武诸葛亮专属联动牌，不复制到董卓卡池',
   ZhiZhe: '武诸葛亮起始专属：智哲，非通用基础牌',
   BeiFa: '武诸葛亮专属：北伐；悬浮提示包含蜀，未声明武将 tag',
   JieDongFeng: '诸葛亮专属：借东风；未声明武将 tag',

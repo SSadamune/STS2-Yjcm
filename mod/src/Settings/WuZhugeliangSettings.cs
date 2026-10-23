@@ -36,6 +36,7 @@ public sealed class WuZhugeliangSettingsData
 
     /// <summary>武诸葛亮当前皮肤：classic 或 mou_zhugeliang。</summary>
     public string WuZhugeliangSkin { get; set; } = "classic";
+    public string WeiDongZhuoSkin { get; set; } = "classic";
 
     /// <summary>勾选“以后不再弹出”时对应的 Mod 版本；版本改变会自然失效。</summary>
     public string AntiPiracyNoticeDismissedVersion { get; set; } = "";
@@ -74,6 +75,8 @@ public static class WuZhugeliangSettings
     public const string PreferJinCuiBgm = "jin_cui";
     public const string ClassicWuZhugeliangSkin = "classic";
     public const string MouZhugeliangSkin = "mou_zhugeliang";
+    public const string ClassicWeiDongZhuoSkin = "classic";
+    public const string TaiShanBengShiSkin = "tai_shan_beng_shi";
     public const string SweepModeCustom = "custom";
     public const string SweepModeRandomBattle = "random_battle";
     public const string SweepModeOneClick = "one_click";
@@ -170,6 +173,11 @@ public static class WuZhugeliangSettings
         static settings => NormalizeWuZhugeliangSkin(settings.WuZhugeliangSkin),
         static (settings, value) => settings.WuZhugeliangSkin = NormalizeWuZhugeliangSkin(value));
 
+    private static readonly ModSettingsValueBinding<WuZhugeliangSettingsData, string> WeiDongZhuoSkinBinding = new(
+        MainFile.ModId, DataKey, SaveScope.Global,
+        static settings => NormalizeWeiDongZhuoSkin(settings.WeiDongZhuoSkin),
+        static (settings, value) => settings.WeiDongZhuoSkin = NormalizeWeiDongZhuoSkin(value));
+
     private static readonly ModSettingsValueBinding<WuZhugeliangSettingsData, string> AntiPiracyNoticeDismissedVersionBinding = new(
         MainFile.ModId,
         DataKey,
@@ -234,6 +242,7 @@ public static class WuZhugeliangSettings
     private static int _sharedRelicReadFailureLogged;
     private static int _mediaReadFailureLogged;
     private static string? _pendingWuZhugeliangSkin;
+    private static string? _pendingWeiDongZhuoSkin;
 
     /// <summary>
     /// 获取武张飞可遇见的角色范围。设置系统尚未就绪或读取失败时保持默认全角色可遇见。
@@ -335,6 +344,28 @@ public static class WuZhugeliangSettings
 
     public static bool UseMouZhugeliangSkin =>
         CurrentWuZhugeliangSkin == MouZhugeliangSkin;
+
+    public static string CurrentWeiDongZhuoSkin => Volatile.Read(ref _pendingWeiDongZhuoSkin)
+        ?? ReadMediaSetting(WeiDongZhuoSkinBinding, ClassicWeiDongZhuoSkin);
+
+    public static bool UseTaiShanBengShiSkin => CurrentWeiDongZhuoSkin == TaiShanBengShiSkin;
+
+    internal static void SetWeiDongZhuoSkin(bool useTaiShanSkin)
+    {
+        string value = useTaiShanSkin ? TaiShanBengShiSkin : ClassicWeiDongZhuoSkin;
+        Volatile.Write(ref _pendingWeiDongZhuoSkin, value);
+        if (Volatile.Read(ref _registrationState) != 2) return;
+        try
+        {
+            WeiDongZhuoSkinBinding.Write(value);
+            WeiDongZhuoSkinBinding.Save();
+            Volatile.Write(ref _pendingWeiDongZhuoSkin, null);
+        }
+        catch (Exception ex)
+        {
+            MainFile.Logger.Warn($"保存威董卓皮肤设置失败，本次会话仍使用所选皮肤：{ex.Message}");
+        }
+    }
 
     public static string CurrentSweepMode =>
         NormalizeSweepMode(ReadMediaSetting(SweepModeBinding, SweepModeCustom));
@@ -476,6 +507,9 @@ public static class WuZhugeliangSettings
         _ => ClassicWuZhugeliangSkin
     };
 
+    internal static string NormalizeWeiDongZhuoSkin(string skin) =>
+        skin == TaiShanBengShiSkin ? TaiShanBengShiSkin : ClassicWeiDongZhuoSkin;
+
     private static string NormalizeSweepMode(string mode) => mode switch
     {
         SweepModeRandomBattle => SweepModeRandomBattle,
@@ -511,6 +545,14 @@ public static class WuZhugeliangSettings
                 WuZhugeliangSkinBinding.Write(pendingSkin);
                 WuZhugeliangSkinBinding.Save();
                 Volatile.Write(ref _pendingWuZhugeliangSkin, null);
+            }
+
+            string? pendingDongZhuoSkin = Volatile.Read(ref _pendingWeiDongZhuoSkin);
+            if (pendingDongZhuoSkin != null)
+            {
+                WeiDongZhuoSkinBinding.Write(pendingDongZhuoSkin);
+                WeiDongZhuoSkinBinding.Save();
+                Volatile.Write(ref _pendingWeiDongZhuoSkin, null);
             }
 
             RitsuLibFramework.RegisterModSettings(MainFile.ModId, page =>

@@ -30,6 +30,15 @@ const purePath = path.join(root, 'artifacts/migration/base.pck');
 const hasLegacyBaseline = fs.existsSync(purePath);
 const pure = hasLegacyBaseline ? readPack(purePath) : new Map();
 const test = readPack(path.join(root, 'artifacts/dist/yjcm/Yjcm.pck'));
+for (const folder of ['WeiDongZhuo','MouZhugeliang']) {
+  const retired=`Spine/${folder}/Combat/character_attack.skel`;
+  for (const base of ['assets/loose','artifacts/dist/yjcm'])
+    assert(!fs.existsSync(path.join(root,base,retired)),`Retired character attack remains: ${retired}`);
+  const relative=`Spine/${folder}/Combat/character.skel`;
+  const source=path.join(root,'assets/loose',relative),delivered=path.join(root,'artifacts/dist/yjcm',relative);
+  assert(fs.existsSync(source)&&fs.existsSync(delivered),`Original character skeleton missing: ${relative}`);
+  assert(fs.readFileSync(source).equals(fs.readFileSync(delivered)),`Original character skeleton delivery mismatch: ${relative}`);
+}
 // Old projects embedded copies of Spine files which are now supplied only as loose assets.
 // No runtime res://Spine references exist; validate loose files separately in check_delivery.
 const obsoleteLooseEntries = new Set();
@@ -77,6 +86,18 @@ for (const [name, data] of pure) {
   } else assert(data.equals(test.get(name)), 'Changed original asset: ' + name);
 }
 const cards = JSON.parse(test.get('Yjcm/localization/zhs/cards.json').toString('utf8'));
+assert.equal(cards['sunqian_burning_link.hoverTitle'], '※模组联动');
+for (const [id, argument] of [
+  ['YJCM_CARD_YI_ZHEN_QING_MENG', 'DreamFireText'],
+  ['YJCM_CARD_ZHU_QUE_YU_SHAN', 'FanFireText'],
+  ['YJCM_CARD_WEI_DONG_ZHUO_ZHU_QUE_YU_SHAN', 'FanFireText']
+]) {
+  assert(cards[`${id}.description`].includes(`{${argument}}`), `Sunqian effect placeholder missing: ${id}`);
+  assert.equal(cards[`${id}.fireAttackInlineText`], '[gold]火攻[/gold]');
+  assert.equal(cards[`${id}.burningInlineText`], '[purple]灼烧[/purple]');
+}
+assert(JSON.parse(test.get('Yjcm/localization/zhs/orbs.json').toString('utf8'))[
+  'YJCM_ORB_ZHU_QUE_YU_SHAN_ORB.description'].includes('{FanFireText}'), 'Fan orb dynamic text missing');
 // Godot exports imported PNGs through .import/ctex, scenes/materials through .remap.
 function hasRuntimeResource(name) {
   if (test.has(name)) return true;
@@ -85,6 +106,35 @@ function hasRuntimeResource(name) {
   const target = test.get(remapName).toString('utf8').match(/path="res:\/\/([^"\r\n]+)"/)?.[1];
   return !!target && test.has(target);
 }
+assert(hasRuntimeResource('WeiDongZhuo/scenes/taishan_select_bg.tscn'), 'TaiShan select scene missing');
+assert(hasRuntimeResource('WeiDongZhuo/scenes/icon.tscn'), 'Dong Zhuo top-bar portrait scene missing');
+assert(hasRuntimeResource('WeiDongZhuo/images/avatar.png'), 'Dong Zhuo character avatar missing');
+assert(test.has('WeiDongZhuo/scripts/taishan_select_bg.gd'), 'TaiShan select layout missing');
+const skinRoot='Spine/WeiDongZhuoTaiShan';
+const taiShan=JSON.parse(fs.readFileSync(path.join(root,'assets/loose',skinRoot,'skin.json'),'utf8'));
+assert.equal(taiShan.name,'泰山崩石');
+assert.equal(taiShan.version,'4.2.43');
+for(const asset of taiShan.assets) for(const file of [`${asset.base}.skel`,`${asset.base}.atlas`,...asset.pages]) {
+  const relative=path.join(skinRoot,asset.folder,file);
+  assert(fs.readFileSync(path.join(root,'assets/loose',relative)).equals(fs.readFileSync(path.join(root,'artifacts/dist/yjcm',relative))),`TaiShan resource mismatch: ${relative}`);
+}
+// Wu-only collaboration cards: imported art, localized attribution/power and loose WAV.
+for (const [portrait, voice] of [
+  ['sun_qian_shui_huo_wu_di', 'shui_huo_wu_di'],
+  ['xin_san_guo_shui_huo_jian_rong', 'shui_huo_jian_rong']
+]) {
+  const resource = `Yjcm/Images/Cards/${portrait}.png`;
+  assert(hasRuntimeResource(resource), `Collaboration portrait missing: ${resource}`);
+  const wav = fs.readFileSync(path.join(root, `assets/loose/Voice/Bank/Assets/${voice}.wav`));
+  assert.equal(wav.toString('ascii', 0, 4), 'RIFF', 'Invalid collaboration audio');
+  assert.equal(wav.toString('ascii', 8, 12), 'WAVE', 'Invalid collaboration audio');
+  assert(wav.equals(fs.readFileSync(path.join(root, `artifacts/dist/yjcm/Voice/Bank/Assets/${voice}.wav`))), 'Collaboration WAV delivery mismatch');
+}
+assert.equal(cards['YJCM_HOVER_COLLABORATION.title'], '联动');
+assert.equal(cards['YJCM_HOVER_COLLABORATION_SUN_QIAN.description'], '本牌来自于新三国孙乾mod');
+assert.equal(cards['YJCM_HOVER_COLLABORATION_XIN_SAN_GUO.description'], '本牌来自于新三国首播版mod');
+const collaborationPowers = JSON.parse(test.get('Yjcm/localization/zhs/powers.json').toString('utf8'));
+assert.equal(collaborationPowers['YJCM_POWER_SHUI_HUO_JIAN_RONG_POWER.title'], '水火兼容');
 // CardKeyword 自带卡面文本；正文再单独写一次会在游戏内重复显示。
 const standaloneKeyword = /(?:^|[。\n])\s*(?:保留|消耗|固有|虚无|狡黠|奇巧)(?:。|\n|$)/u;
 for (const [packName, files] of [...(hasLegacyBaseline ? [['pure', pure]] : []), ['test', test]]) {
@@ -215,4 +265,17 @@ assert(powers['YJCM_POWER_SHI_FENG_PLUS.description'].includes('永久免费')
   && !powers['YJCM_POWER_SHI_FENG_PLUS.description'].includes('消耗'),
   'ShiFeng+ power permanent-free wording missing');
 assert(test.size >= pure.size, `Feature pack smaller than base: ${test.size} < ${pure.size}`);
+for (const resource of [
+  'Yjcm/scenes/shang_fang_gu_event_background.tscn',
+  'Yjcm/scenes/shang_fang_gu_event_background.gd',
+  'Yjcm/Images/events/shang_fang_gu_zhi_yu.png',
+  'Yjcm/Images/Relics/qi_xing_deng.png',
+  'Yjcm/Images/Relics/Big/qi_xing_deng.png'
+]) assert(hasRuntimeResource(resource), `ShangFangGu runtime art missing: ${resource}`);
+assert.equal(events['YJCM_EVENT_SHANG_FANG_GU_ZHI_YU.title'], '上方谷之雨');
+assert.equal(events['YJCM_EVENT_SHANG_FANG_GU_ZHI_YU.pages.INITIAL.description'],
+  '独木难支益州地，上方雨落万事空\n先帝大业化清梦，只叹天意助冢虎');
+const relicText = JSON.parse(test.get('Yjcm/localization/zhs/relics.json').toString('utf8'));
+assert.equal(relicText['YJCM_RELIC_QI_XING_DENG.title'], '七星灯');
+assert.equal(relicText['YJCM_RELIC_QI_XING_DENG.flavor'], '魏延将军，走慢点！');
 console.log(`PACK_AUDIT_OK mod=Yjcm entries=${test.size} legacyBaseline=${hasLegacyBaseline ? pure.size : 'not-present'}; runtime resources and localizations checked`);

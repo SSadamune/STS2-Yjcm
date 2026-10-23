@@ -14,14 +14,18 @@ $changed=@(Get-ChildItem -LiteralPath $sourceRoot -Recurse -File | Where-Object 
     $destination=Join-Path $target ([IO.Path]::GetRelativePath($sourceRoot,$_.FullName))
     (Test-Path -LiteralPath $destination) -and (Get-FileHash -LiteralPath $_.FullName).Hash -ne (Get-FileHash -LiteralPath $destination).Hash
 })
-if($changed.Count) {
+$retired=@(Get-YjcmRetiredRuntimePaths $target | Where-Object {Test-Path -LiteralPath $_ -PathType Leaf})
+$backupFiles=@($changed | ForEach-Object {
+    Get-Item -LiteralPath (Join-Path $target ([IO.Path]::GetRelativePath($sourceRoot,$_.FullName)))
+}) + @($retired | ForEach-Object {Get-Item -LiteralPath $_})
+if($backupFiles.Count) {
     $backupRoot=Join-Path $repo 'artifacts/deploy-backups'
     New-Item -ItemType Directory -Path $backupRoot -Force | Out-Null
     $archive=Join-Path $backupRoot ((Get-Date -Format 'yyyyMMdd_HHmmss_fff')+'.zip')
     $zip=[IO.Compression.ZipFile]::Open($archive,[IO.Compression.ZipArchiveMode]::Create)
-    try { foreach($file in $changed) {
-        $relative=[IO.Path]::GetRelativePath($sourceRoot,$file.FullName)
-        [void][IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip,(Join-Path $target $relative),$relative.Replace('\','/'))
+    try { foreach($file in $backupFiles) {
+        $relative=[IO.Path]::GetRelativePath($target,$file.FullName)
+        [void][IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip,$file.FullName,$relative.Replace('\','/'))
     }} finally {$zip.Dispose()}
     # Keep only the newest three exact ZIP files under this dedicated backup directory.
     $backups=@(Get-ChildItem -LiteralPath $backupRoot -File -Filter '*.zip'|Sort-Object Name -Descending|Select-Object -Skip 3)
@@ -31,6 +35,10 @@ if($changed.Count) {
     }
 }
 Get-ChildItem -LiteralPath (Join-Path $repo 'artifacts/dist/yjcm') -Force | Copy-Item -Destination $target -Recurse -Force
+foreach($file in $retired) {
+    Remove-Item -LiteralPath $file
+    Write-Output "REMOVED_RETIRED_RESOURCE $file (saved in deployment backup)"
+}
 & pwsh -NoProfile -File (Join-Path $repo 'tests/check_delivery.ps1') -CheckSteam -GamePath $GamePath
 Assert-YjcmNativeExit 'Deployed files failed verification'
 Write-Output "DEPLOY_OK destination=$target"

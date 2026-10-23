@@ -55,8 +55,9 @@ public sealed class WeiDongZhuo : ModCharacterTemplate<WeiDongZhuoCardPool, Iron
     {
         get
         {
-            SetAssetRoot();
-            return "res://WeiDongZhuo/scenes/select_bg.tscn";
+            bool useTaiShan = SetAssetRoot();
+            return useTaiShan ? "res://WeiDongZhuo/scenes/taishan_select_bg.tscn"
+                : "res://WeiDongZhuo/scenes/select_bg.tscn";
         }
     }
 
@@ -64,17 +65,42 @@ public sealed class WeiDongZhuo : ModCharacterTemplate<WeiDongZhuoCardPool, Iron
     // Use the direct RitsuLib override so rest-site creation never falls back to Ironclad.
     public override string CustomRestSiteAnimPath => RestSiteScenePath;
 
+    public override string CustomMerchantAnimPath
+    {
+        get
+        {
+            SetAssetRoot();
+            return "res://WeiDongZhuo/scenes/merchant.tscn";
+        }
+    }
+
     protected override NCreatureVisuals? TryCreateCreatureVisuals()
     {
         SetAssetRoot();
         return RitsuGodotNodeFactories.CreateFromScenePath<NCreatureVisuals>(AssetProfile.Scenes!.VisualsPath!);
     }
 
-    private static void SetAssetRoot()
+    internal static string SkinAssetFolder(bool useTaiShan) =>
+        useTaiShan ? "WeiDongZhuoTaiShan" : "WeiDongZhuo";
+
+    private static bool SetAssetRoot()
     {
+        bool useTaiShan = WuZhugeliangSettings.UseTaiShanBengShiSkin;
+        string root = Path.Combine(Path.GetDirectoryName(typeof(WeiDongZhuo).Assembly.Location)!,
+            "Spine", SkinAssetFolder(useTaiShan));
+        if (useTaiShan && !File.Exists(Path.Combine(root, "Combat", "character.skel")))
+        {
+            MainFile.Logger.Warn("泰山崩石皮肤素材缺失，回退威董卓默认皮肤。");
+            useTaiShan = false;
+            root = Path.Combine(Path.GetDirectoryName(typeof(WeiDongZhuo).Assembly.Location)!,
+                "Spine", SkinAssetFolder(false));
+        }
         if (Engine.GetMainLoop() is SceneTree tree)
-            tree.Root.SetMeta("weidongzhuo_asset_root", Path.Combine(
-                Path.GetDirectoryName(typeof(WeiDongZhuo).Assembly.Location)!, "Spine", "WeiDongZhuo"));
+        {
+            tree.Root.SetMeta("weidongzhuo_asset_root", root);
+            tree.Root.SetMeta("weidongzhuo_taishan_skin", useTaiShan);
+        }
+        return useTaiShan;
     }
 
     // 4杀、4闪、据陲、豪首。
