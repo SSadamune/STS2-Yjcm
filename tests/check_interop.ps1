@@ -31,6 +31,41 @@ if($reverseChecks -ne 17 -or $contract.commit -ne '38ca437e' -or
    $contract.isReady -ne $true -or $contract.type -ne 'Squ.Api.SunqianUniversePublicApi, sunqian-universe' -or
    $proxy -notmatch 'Squ.Api.SunqianUniversePublicApi, sunqian-universe') { throw 'Sunqian proxy target/property drift' }
 Write-Output "SUNQIAN_SIGNATURES_OK methods=$reverseChecks apiBlob=$($contract.apiBlob.Substring(0,8))"
+$mechanicTagHelper=Get-Content -LiteralPath (Join-Path $workspace 'mod\src\Interop\SunqianMechanicBoundTag.cs') -Raw
+foreach($required in @(
+    'SunqianUniverseInterop.IsReady',
+    'SunqianUniverseInterop.CharacterMechanicBoundCardTag',
+    '.Distinct()'
+)) {
+    if(-not $mechanicTagHelper.Contains($required)) { throw "Character-mechanic tag helper missing: $required" }
+}
+$mechanicBoundCards=@(
+    @('XingXiaHouBaJueFa','Cards\XingXiaHouBaJueFa.cs'),
+    @('XingXiaHouBaWeiGu','Cards\XingXiaHouBaWeiGu.cs'),
+    @('ShenJiangWeiTianRen','Cards\ShenJiangWeiTianRen.cs'),
+    @('WeiDongZhuoShenJiangWeiTianRen','Cards\Generated\WeiDongZhuoShenJiangWeiTianRen.cs'),
+    @('WeiZhangXingCaiXianKuang','Cards\WeiZhangXingCaiXianKuang.cs'),
+    @('ShenZhugeliangQiXing','Cards\ShenZhugeliangQiXing.cs'),
+    @('WeiDongZhuoShenZhugeliangQiXing','Cards\Generated\WeiDongZhuoShenZhugeliangQiXing.cs'),
+    @('MouZhugeliangKongCheng','Cards\EventAncientCards.cs'),
+    @('LiuBeiJiJiang','Cards\LiuBeiJiJiang.cs'),
+    @('WeiLiuBeiRenGou','Cards\WeiLiuBeiRenGou.cs'),
+    @('WeiDongZhuoHaoShou','NewCards\WeiDongZhuoComboCards.cs')
+)
+foreach($entry in $mechanicBoundCards) {
+    $type,$file=$entry
+    $text=Get-Content -LiteralPath (Join-Path $workspace "mod\src\$file") -Raw
+    $classBlock=[regex]::Match($text,"public sealed class $type[\s\S]*?\n}").Value
+    if(-not $classBlock.Contains('SunqianMechanicBoundTag.With(base.Tags)')) {
+        throw "Character-mechanic tag missing: $type"
+    }
+}
+$qunCards=Get-Content -LiteralPath (Join-Path $workspace 'mod\src\NewCards\WeiDongZhuoQunCards.cs') -Raw
+$ruShiBlock=[regex]::Match($qunCards,'public sealed class WeiDongZhuoMouJiaXuRuShi[\s\S]*?\n}').Value
+if($ruShiBlock.Contains('SunqianMechanicBoundTag')) { throw 'Derived RuShi must not receive the character-mechanic tag' }
+$eventCards=Get-Content -LiteralPath (Join-Path $workspace 'mod\src\Cards\EventAncientCards.cs') -Raw
+$zhongAoBlock=[regex]::Match($eventCards,'public sealed class ShiWeiYanZhongAo[\s\S]*?\n}').Value
+if($zhongAoBlock.Contains('SunqianMechanicBoundTag')) { throw 'Event quest ZhongAo must not receive the character-mechanic tag' }
 $dreamInterop=Get-Content -LiteralPath (Join-Path $workspace 'mod\src\Interop\YiZhenQingMengInterop.cs') -Raw
 foreach($required in @(
     'IsModReady && SunqianUniverseInterop.IsSupportingActorCharacter(player?.Character)',

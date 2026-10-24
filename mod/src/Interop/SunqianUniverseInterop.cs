@@ -17,6 +17,7 @@ namespace Yjcm.Interop;
 public static class SunqianUniverseInterop
 {
     public static bool IsReady => false;
+    public static CardTag CharacterMechanicBoundCardTag => default;
     public static CardTag BurningCardTag => default;
     public static bool IsSupportingActorCharacter(CharacterModel? character) => false;
     public static bool HasSupportingActorInCombat() => false;

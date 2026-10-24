@@ -5,6 +5,7 @@
   "type": "Squ.Api.SunqianUniversePublicApi, sunqian-universe",
   "isReady": true,
   "properties": {
+    "CharacterMechanicBoundCardTag": "CardTag",
     "BurningCardTag": "CardTag"
   },
   "methods": {
